@@ -1,0 +1,54 @@
+
+*{padding:0px;margin:0px;box-sizing: border-box;}
+html{font-size:1rem;font-family:'roboto',sans-serif;scroll-behavior: smooth;}
+
+/* Some variable for css styling are below */
+:root
+{
+    --main-theme-bg-col:white;
+    --main-theme-bg-alt-col:whitesmoke;
+    --main-theme-text-col:black;
+    --main-theme-text-alt-col:gray;
+
+    --theme-btn-bg-col:orangered;
+    --theme-btn-bg-hov-col:orange;
+    --theme-btn-text-col:black;
+    --theme-btn-text-hov-col:gray;
+
+    --pse-underline1-col:violet;
+    --pse-underline1-thick:4px;
+    --pse-underline2-col:blue;
+    --pse-underline2-thick:4px;
+    --pse-underline3-col:green;
+    --pse-underline3-thick:4px;
+    --pse-underline4-col:cyan;
+    --pse-underline4-thick:4px;
+}
+
+/* uni flex styling */
+.flex-r-se-c{display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;}
+.flex-r-sb-c{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.flex-c-se-c{display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;}
+.flex-c-sb-c{display: flex;flex-direction: column;justify-content: space-between;align-items: center;}
+
+.theme-button{border:none;padding:0.8rem 1.6rem;cursor:pointer;background-color:var(--theme-btn-bg-col);color:var(--theme-btn-text-col);border-radius:5px;transition:0.5s;}
+.theme-button:hover{color:var(--theme-btn-text-hov-col);background-color: var(--theme-btn-bg-hov-col);}
+
+.pse-ul1,.pse-ul2,.pse-ul3,.pse-ul4{position:relative;transition:0.8s;overflow: hidden;border-radius:2px;}
+.pse-ul1::before,.pse-ul2::before,.pse-ul3::before,.pse-ul4::before{position:absolute;content:'';bottom:0;left:0;transition:0.5s;}
+
+.pse-ul1:hover{color:var(--pse-underline1-col);}
+.pse-ul1::before{height:var(--pse-underline1-thick);background-color: var(--pse-underline1-col);width:0%;}
+.pse-ul1:hover::before{width: 100%;color:var(--pse-underline1-col);}
+
+.pse-ul2:hover{color:var(--pse-underline2-col);}
+.pse-ul2::before{height:var(--pse-underline2-thick);background-color: var(--pse-underline2-col);width:0%;left:50%;}
+.pse-ul2:hover:before{width:100%;left:0;}
+
+.pse-ul3:hover{color:var(--pse-underline3-col);}
+.pse-ul3::before{height:var(--pse-underline3-thick);background-color: var(--pse-underline3-col);width:0%;left:100%;}
+.pse-ul3:hover:before{width:100%;left:0%;}
+
+.pse-ul4:hover{color:var(--pse-underline4-col);}
+.pse-ul4::before{width:100%;background-color: var(--pse-underline4-col);height: 0;}
+.pse-ul4:hover:before{height:var(--pse-underline4-thick);}
