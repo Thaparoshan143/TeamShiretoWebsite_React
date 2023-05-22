@@ -1,0 +1,39 @@
+.Footer
+{
+    padding:0.1rem;
+}
+
+.Light .Footer
+{
+    background-color: var(--main-alt-white);
+}
+
+.Dark .Footer 
+{
+    background-color: var(--main-alt-black);
+}
+
+.Footer *
+{
+    background-color: inherit;
+}
+
+.Footer-Content
+{
+    width:100%;
+    padding:1rem;
+}
+
+.Footer-Content .item
+{
+    padding:1rem;
+    font-weight: bold;
+}
+
+.Footer-Text
+{
+    font-weight:light;
+    font-size: 1.2rem;
+    letter-spacing:2px;
+    padding:2rem;
+}

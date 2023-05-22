@@ -1,0 +1,32 @@
+
+.Mode-Btn
+{
+    position:fixed;
+    top:0.5rem;
+    right:0.5rem;
+    padding:0.5rem 0.8rem;
+    z-index:100;
+    color:var(--main-theme-text-alt-col);
+    border-radius:8px;
+    opacity: 0.7;
+    transition: 0.5s;
+    border:2px solid var(--main-theme-text-col);
+}
+
+.Light .Mode-Btn
+{
+    background-color: black;
+}
+
+.Dark .Mode-Btn
+{
+    background-color: white;
+}
+
+.Mode-Btn:hover
+{
+    color:var(--main-theme-text-col);
+    opacity: 1;
+    box-shadow:0 0 10px 1px var(--main-theme-text-col);
+}
+

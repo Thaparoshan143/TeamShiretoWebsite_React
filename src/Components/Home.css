@@ -1,0 +1,40 @@
+
+.Home-Page
+{
+    position: relative;
+    padding-bottom:6rem;
+}
+
+.Home-Page *
+{
+    z-index: 1;
+    background-color: transparent;
+}
+
+.Home-Page .page-title
+{
+    font-family: 'Barlow', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 6em;
+    letter-spacing: 1px;
+    position:relative;
+}
+
+.Desc-Text
+{
+    font-size:1.8rem;
+    width: 80%;
+    text-align: center;
+    color:var(--main-white);
+}
+
+.Gallary-Cont img
+{
+    position:absolute;
+    left:0;
+    top:5rem;
+    width: 100%;
+    z-index:0;
+    opacity: 0.8;
+}

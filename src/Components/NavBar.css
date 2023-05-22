@@ -1,0 +1,67 @@
+:root
+{
+    --item-font-size:1.1em;
+}
+
+.Logo-Cont img
+{
+    width:2.8rem;
+    margin-right:30vw;
+    animation:rotateImg 10s infinite;
+}
+
+@keyframes rotateImg
+{
+    0%
+    {
+        transform:rotateZ(-20deg);
+    }
+
+    60%
+    {
+        transform:rotateZ(360deg);
+    }
+
+    100%
+    {
+        transform:rotateZ(340deg);
+    }
+}
+
+.NavBar
+{
+    z-index:10;
+}
+
+.Nav-Items
+{
+    padding-right:2rem;
+}
+
+.Nav-Item
+{
+    font-size:var(--item-font-size);
+    color:var(--main-theme-text-alt-col);
+    padding:1.4rem 0.4rem;
+    cursor:pointer;
+    font-weight: bolder;
+    transition:color,transform 0.5s;
+    background-color: transparent;
+}
+
+.Nav-Item.active.pse-ul-theme::before
+{
+    width: 100%;
+    left:0%;
+}
+
+.Nav-Item.active
+{
+    color:var(--main-theme-text-col);
+}
+
+.Nav-Item:hover
+{
+    color:var(--main-theme-text-col);
+    transform:scaleX(1.1);
+}
