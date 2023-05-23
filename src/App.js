@@ -2,6 +2,7 @@ import { Routes,Route } from 'react-router-dom';
 import './App.css';
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
+import Teams from "./Components/Teams"
 import Footer from "./Components/Footer";
 import { useState } from 'react';
 
@@ -23,6 +24,7 @@ function App() {
 				{/* Default Landing Page is Home Page */}
 				<Route path="*" element={<Home />} />
 				<Route path="/Home" element={<Home />} />
+				<Route path="/Teams" element={<Teams />}/>
 			</Routes>
 			<Footer />
 		</div>

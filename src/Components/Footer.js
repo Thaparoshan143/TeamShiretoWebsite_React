@@ -21,7 +21,7 @@ function Footer()
 function CopyRight()
 {
 	return (
-		<span className="Footer-Text">Copyright © 2023 <b>Team Shireto</b> All Rights Reserved</span>
+		<span className="Footer-Text">Copyright © 2023 <b style={{color:"red"}}>Team Shireto</b> All Rights Reserved</span>
 	)
 }
 
@@ -40,9 +40,9 @@ function Links()
 {
 	return (
 		<ul className="Links flex-r-se-c">
-			<li className="item">Contact</li>
+			<li className="item">Refrences</li>
 			<li className="item">Events</li>
-			<li className="item">Join Us</li>
+			<li className="item">Subscribe</li>
 		</ul>
 	)
 }

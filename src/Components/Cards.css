@@ -1,0 +1,77 @@
+.Cards-Wrapper
+{
+    padding:0.2rem;
+    width: 85%;
+    flex-wrap:wrap;
+}
+
+.Light .Card-Cont
+{
+    background-color: var(--main-alt-white);
+}
+
+.Dark .Card-Cont
+{
+    background-color: var(--main-alt-black);
+}
+
+.Card-Cont
+{
+    min-width:28%;
+    padding:2rem 1rem;
+    transition:0.5s;
+    margin:8rem 1rem;
+}
+
+.Card-Cont:hover
+{
+    transform: scale(1.03);
+    box-shadow: 0 0 10px 0.1px red;
+}
+
+.Card-Cont .Member-Photo
+{
+    margin-top:-5rem;
+    width:20rem;
+    border-radius: 10px;
+}
+
+.Card-Cont span, .Socials
+{
+    background-color: transparent;
+    margin:0.4rem;
+}
+
+.Socials
+{
+    margin-top:2rem;
+}
+
+.Socials span, .Socials a
+{
+    border-radius:50%;
+    padding:0.8rem 1.2rem;
+    transition:0.5s;
+    margin:0 1rem;
+    background-color: transparent;
+}
+
+.Socials span:hover, .Socials a:hover
+{
+    background-color: red;
+    color:white;
+}
+
+.Card-Cont .text
+{
+    font-family: 'Barlow', sans-serif;
+    font-size:1.2rem;
+}
+
+.Card-Cont .Member-Depart
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color:red;
+}
+
