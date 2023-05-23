@@ -29,6 +29,7 @@ function Socials()
 {
 	return (
 		<ul className="Socials flex-c-se-c">
+			<span className="text" style={{color:"red",textTransform:"uppercase"}}>Follow us on:</span>
 			{socialLinks.map((link)=>{
 				return <li className="item">{link}</li>
 			})}
@@ -39,11 +40,14 @@ function Socials()
 function Links()
 {
 	return (
+		<div className="flex-c-se-c">
+		<span className="text" style={{color:"red",textTransform:"uppercase"}}>Quick Links:</span>
 		<ul className="Links flex-r-se-c">
 			<li className="item">Refrences</li>
 			<li className="item">Events</li>
 			<li className="item">Subscribe</li>
 		</ul>
+		</div>
 	)
 }
 
@@ -51,7 +55,7 @@ function Info()
 {
 	return (
 		<span className="flex-c-se-c Info">
-					<b className="text" style={{fontSize:"2rem",color:"red",textTransform:"uppercase"}}>Team Shireto</b>
+					<b className="text" style={{fontSize:"2rem",color:"red",textTransform:"uppercase"}}>Our Location</b>
 					<span className="text">IOE Thapathali Campus</span>
 					<span className="text">Kathmandu, Nepal</span>
 		</span>
