@@ -1,56 +1,75 @@
 .Cards-Wrapper
 {
     padding:0.2rem;
-    width: 85%;
+    width: 90%;
     flex-wrap:wrap;
 }
 
-.Light .Card-Cont
-{
-    background-color: var(--main-alt-white);
-}
+.Light .Card-Cont{background-color: var(--main-alt-white);}
 
-.Dark .Card-Cont
-{
-    background-color: var(--main-alt-black);
-}
+.Dark .Card-Cont{background-color: var(--main-alt-black);}
 
 .Card-Cont
 {
-    min-width:28%;
-    padding:1rem;
+    min-width:22rem;
     transition:0.4s;
-    margin:6rem 1rem;
-    /* border-radius:2rem 2rem 0 0; */
+    margin:4rem 1rem;
+    overflow: hidden;
 }
 
 .Card-Cont:hover
 {
-    transform: scale(1.02);
-    box-shadow: 0 0 1px 1px red;
+    box-shadow: 0 0 20px 0.1px rgba(255,0,0,0.8);
 }
 
 .Card-Cont .Member-Photo
 {
-    /* margin-top:-15rem; */
-    width:20rem;
-    height: 30rem;
+    width:22rem;
+    height: 32rem;
+    margin-bottom:0.5rem;
     border-radius: 5px;
     object-fit:cover;
+    transition: 0.5s;
 }
 
-.Card-Cont span, .Socials
+.Card-Cont .Member-Photo:hover
 {
-    background-color: transparent;
-    margin:0.4rem;
+    transform:scale(1.02);
+}
+
+.Card-Cont .Member-Depart
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .Socials
 {
-    margin:2rem 0;
+    margin:1rem 0;
 }
 
-.Socials span, .Socials a
+.Card-Cont .Socials a
+{
+    margin:1rem 2.5rem;
+}
+
+.Card-Cont .Social-Icon
+{
+    border-radius: 20%;
+    font-size:4rem;
+    padding:1rem;
+    margin:1rem;
+    transition:0.5s;
+}
+
+.Card-Cont .Social-Icon:hover
+{
+    color:white;
+    background-color: red;
+}
+
+.Socials span
 {
     border-radius:50%;
     padding:0.8rem 1.2rem;
@@ -59,7 +78,7 @@
     background-color: transparent;
 }
 
-.Socials span:hover, .Socials a:hover
+.Socials span:hover
 {
     background-color: red;
     color:white;
@@ -71,10 +90,4 @@
     font-size:1.2rem;
 }
 
-.Card-Cont .Member-Depart
-{
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color:red;
-}
 

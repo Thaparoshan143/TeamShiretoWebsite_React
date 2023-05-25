@@ -2,9 +2,10 @@ import { Routes,Route } from 'react-router-dom';
 import './App.css';
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
-import Teams from "./Components/Teams"
+import Teams from "./Components/Teams";
 import Footer from "./Components/Footer";
 import { useState } from 'react';
+import {FaSun,FaMoon,FaLightbulb} from 'react-icons/fa';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
 
 	return (
 		<div className={"App "+(isDark?"Dark":"Light")}>
-			<button onClick={changeMode} className="Mode-Btn">{isDark?"L":"D"}</button>
+			<button onClick={changeMode} className="Mode-Btn">{isDark?<FaLightbulb className="Mode-Icon" style={{color:'black',backgroundColor:'white'}}/>:<FaMoon className="Mode-Icon" style={{color:'white',backgroundColor:'black'}} />}</button>
 			<NavBar />
 			<Routes>
 				{/* Default Landing Page is Home Page */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Cards.css";
-
+import {FaFacebookF,FaLinkedinIn} from "react-icons/fa";
 
 
 function Cards(props) {
@@ -33,11 +33,11 @@ function Card(props)
            {/* use tryRequire if not sure team member photo exists or not */}
            <img className="Member-Photo" src={MemberImageExist()?MemberImageExist():""} alt="Member Photo" />
             <span className="Member-Name text">{cardObject[0]}</span>
-            <span className="Member-Depart text">{cardObject[1]}</span>
+            <span className="Member-Depart theme-text">{cardObject[1]}</span>
             <span className="Member-Email text">{cardObject[2]}</span>
             <div className="Socials flex-row-evenly">
-                <span className="Facebook">F</span>
-                <a href={cardObject[3]} className="Linkedin">L</a>
+                <a href={cardObject[3]} target="_blank"><FaLinkedinIn className="Social-Icon"/></a>
+                <a href={cardObject[4]} target="_blank"><FaFacebookF className="Social-Icon" /></a>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ function NavItems()
 {
 	return (
 		<ul className="Nav-Items flex-r-se-c">
-			<div className="Logo-Cont"><img alt="logo" src={logo} /></div>
+			<div className="Logo-Cont"><NavLink to="/Home"><img alt="logo" src={logo} /></NavLink></div>
 			{
 				navItemList.map((iName)=>
 				{

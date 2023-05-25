@@ -1,6 +1,8 @@
+/* Just for safe */
 .Footer
 {
     padding:0.1rem;
+    z-index:100;
 }
 
 .Light .Footer
@@ -13,28 +15,24 @@
     background-color: var(--main-alt-black);
 }
 
-.Footer *
-{
-    background-color: transparent;
-}
-
 .Footer-Content
 {
     width:100%;
-    padding:1rem;
+    padding:2rem 0.5rem;
 }
 
-.Footer-Content .item
+.Footer-Content .Footer-Title
 {
-    padding:1rem;
+    color:var(--main-theme-text-col);
+    text-transform: uppercase;
     font-weight: bold;
+    margin:0.5rem;
 }
 
-.Footer-Text
+.Footer-CR-Text
 {
     font-weight:light;
-    font-size: 1.2rem;
     letter-spacing:2px;
-    padding:2rem;
     color:gray;
+    padding:2rem 0;
 }

@@ -1,18 +1,21 @@
 import "../uni.css"
 import "./Footer.css"
+import { Link } from "react-router-dom";
 
-const socialLinks=["Facebook","Linkedin"];
+const socialLinksTitle=["Facebook","Linkedin","Youtube"];
+const socialLinksURL=["https://www.facebook.com/teamshireto/","https://www.linkedin.com/company/team-shireto/","https://www.youtube.com/@teamshireto1629/featured"]
+const quickLinksTitle=["Refrences","Events","Subscribe"];
 
 function Footer()
 {
 	return(
 		<footer className="Footer flex-c-se-c">
 			<div className="Footer-Content flex-r-se-c">
-				<Info />
-				<Links />
+				<AddressInfo />
+				<QuickLinks />
 				<Socials />
 			</div>
-			<br /><hr width="90%" color="red"/><br />
+			<hr width="90%" color="red"/>
 			<CopyRight />
 		</footer>
 	)
@@ -21,43 +24,43 @@ function Footer()
 function CopyRight()
 {
 	return (
-		<span className="Footer-Text">Copyright © 2023 <b style={{color:"red"}}>Team Shireto</b> All Rights Reserved</span>
+		<span className="Footer-CR-Text">Copyright © 2023 <b style={{color:"red",fontWeight:"bodler"}}>TEAM SHIRETO</b> All Rights Reserved</span>
 	)
 }
 
 function Socials()
 {
 	return (
-		<ul className="Socials flex-c-se-c">
-			<span className="text" style={{color:"red",textTransform:"uppercase"}}>Follow us on:</span>
-			{socialLinks.map((link)=>{
-				return <li className="item">{link}</li>
+		<ul className="Footer-Socials flex-c-se-c">
+			<span className="Footer-Title">Follow us on :</span>
+			{socialLinksTitle.map((link,ind)=>{
+				return <Link key={link} to={socialLinksURL[ind]} target="_blank" className="item">{link}</Link>
 			})}
 		</ul>
 	)
 }
 
-function Links()
+function QuickLinks()
 {
 	return (
 		<div className="flex-c-se-c">
-		<span className="text" style={{color:"red",textTransform:"uppercase"}}>Quick Links:</span>
+		<span className="Footer-Title">Quick Links :</span>
 		<ul className="Links flex-r-se-c">
-			<li className="item">Refrences</li>
-			<li className="item">Events</li>
-			<li className="item">Subscribe</li>
+			{quickLinksTitle.map((qLink)=>{
+				return <Link key={qLink} to={"/"+qLink} className="item">{qLink}</Link>
+			})}
 		</ul>
 		</div>
 	)
 }
 
-function Info()
+function AddressInfo()
 {
 	return (
 		<span className="flex-c-se-c Info">
-					<b className="text" style={{fontSize:"2rem",color:"red",textTransform:"uppercase"}}>Our Location</b>
-					<span className="text">IOE Thapathali Campus</span>
-					<span className="text">Kathmandu, Nepal</span>
+			<span className="Footer-Title" style={{fontSize:'2rem'}}>Our Location</span>
+			<span className="text">IOE Thapathali Campus</span>
+			<span className="text">Kathmandu, Nepal</span>
 		</span>
 	)
 }

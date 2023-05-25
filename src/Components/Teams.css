@@ -1,7 +1,7 @@
+.Light .Team-Members{background-color: var(--main-white);}
+.Dark .Team-Members{background-color:var(--main-black);}
 
 .Team-Members .page-title
 {
-    padding:0.8rem 0;
-    margin-top:4rem;
-    background-color: transparent;
+    margin-top:10rem;   
 }
