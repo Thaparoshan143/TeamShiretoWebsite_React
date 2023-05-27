@@ -12,7 +12,7 @@
 .Card-Cont
 {
     min-width:22rem;
-    transition:0.4s;
+    transition:0.2s;
     margin:4rem 1rem;
     overflow: hidden;
 }

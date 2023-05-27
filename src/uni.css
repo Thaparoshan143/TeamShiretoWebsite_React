@@ -67,6 +67,7 @@ html{font-size:1rem;font-family:'roboto',sans-serif;scroll-behavior: smooth;colo
 {
     min-height: 100vh;
     padding:0.1rem;
+    padding-top:5rem;
 }
 
 .page-title
@@ -74,6 +75,7 @@ html{font-size:1rem;font-family:'roboto',sans-serif;scroll-behavior: smooth;colo
     font-size:3em;
     text-transform: uppercase;
     font-weight: bolder;
+    display: block;
 }
 
 .Dark .item, .Dark .text
