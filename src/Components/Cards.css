@@ -44,45 +44,6 @@
     text-transform: uppercase;
 }
 
-.Socials
-{
-    margin:1rem 0;
-}
-
-.Card-Cont .Socials a
-{
-    margin:1rem 2.5rem;
-}
-
-.Card-Cont .Social-Icon
-{
-    border-radius: 20%;
-    font-size:4rem;
-    padding:1rem;
-    margin:1rem;
-    transition:0.5s;
-}
-
-.Card-Cont .Social-Icon:hover
-{
-    color:white;
-    background-color: red;
-}
-
-.Socials span
-{
-    border-radius:50%;
-    padding:0.8rem 1.2rem;
-    transition:0.5s;
-    margin:0 1rem;
-    background-color: transparent;
-}
-
-.Socials span:hover
-{
-    background-color: red;
-    color:white;
-}
 
 .Card-Cont .text
 {

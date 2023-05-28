@@ -11,6 +11,7 @@ function Home() {
             <img src={GroupPhoto} alt="Group Photo"/>
         </div>
         <span className="page-title">Team Shireto</span>
+        <span className="sub-title">Pushing Limits, CHASING VICTORY</span>
         <span className="Desc-Text">{teamDesc}</span>
     </div>
   )

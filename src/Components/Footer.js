@@ -3,8 +3,8 @@ import "./Footer.css"
 import { Link } from "react-router-dom";
 
 const socialLinksTitle=["Facebook","Linkedin","Youtube"];
-const socialLinksURL=["https://www.facebook.com/teamshireto/","https://www.linkedin.com/company/team-shireto/","https://www.youtube.com/@teamshireto1629/featured"]
-const quickLinksTitle=["Refrences","Events","Subscribe"];
+const socialLinksURL=["https://www.facebook.com/teamshireto/","https://www.linkedin.com/company/team-shireto/","https://www.youtube.com/@teamshireto1629/featured"];
+const quickLinksTitle=["Refrences","Events","Contact Us"];
 
 function Footer()
 {

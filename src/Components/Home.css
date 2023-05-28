@@ -18,9 +18,15 @@
 {
     font-family: 'Barlow', sans-serif;
     font-size: 6em;
-    padding-top:5rem;
+    padding-top:9rem;
     z-index: 1;
     transition:0.5s;
+}
+
+.Home-Page .sub-title
+{
+    z-index: 1;
+    margin-top:2rem;
 }
 
 .Desc-Text
@@ -29,7 +35,7 @@
     width: 80%;
     text-align: center;
     color:var(--main-white);
-    transition:1s;
+    margin-bottom:2rem;
     z-index: 1;
 }
 

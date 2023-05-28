@@ -1,0 +1,60 @@
+
+.Dark .Contribute{background-color: var(--main-black);}
+.Light .Contribute{background-color: var(--main-white);}
+
+.Light .Supp-Desc{color:var(--main-black);}
+.Dark .Supp-Desc{color:var(--main-white);}
+
+.Contribute .sub-title
+{
+    margin:3rem 0;
+}
+
+.Support-Cont, .Why-Us-Cont
+{
+    width: 90%;
+    padding:1rem;
+}
+
+.Support-List, .Why-Us-List
+{
+    border-radius:10px;
+    background-color: rgba(125,125,125,0.3);
+    margin:2rem 0;
+    width: 100%;
+}
+
+.Supp-Item
+{
+    width: 90%;
+    margin:1rem;
+    border-bottom:2px solid red;
+    padding:1rem;
+}
+
+.Supp-Title-Cont
+{
+    font-size:1.5rem;
+    font-weight:bolder;
+    width: 100%;
+    margin-bottom:0.5rem;
+}
+
+.Supp-Desc
+{
+    transition:0.5s;
+    font-size: 1.4rem;
+    font-family: 'bralow';
+}
+
+.Why-Us-List
+{
+    list-style:decimal;
+}
+
+.Why-Us-List li
+{
+    font-size: 1.2rem;
+    margin:1rem 0;
+}
+
