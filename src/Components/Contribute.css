@@ -7,13 +7,13 @@
 
 .Contribute .sub-title
 {
-    margin:3rem 0;
+    margin:3.2rem 0 0.2rem 0;
 }
 
 .Support-Cont, .Why-Us-Cont
 {
-    width: 90%;
-    padding:1rem;
+    width: 85%;
+    padding:0.2rem;
 }
 
 .Support-List, .Why-Us-List
@@ -22,6 +22,7 @@
     background-color: rgba(125,125,125,0.3);
     margin:2rem 0;
     width: 100%;
+    padding:1rem;
 }
 
 .Supp-Item
@@ -47,14 +48,26 @@
     font-family: 'bralow';
 }
 
-.Why-Us-List
-{
-    list-style:decimal;
-}
-
 .Why-Us-List li
 {
     font-size: 1.2rem;
-    margin:1rem 0;
+    margin:1rem;
+    border-bottom: 2px dashed red;
+}
+
+.Pre-Spon-Cont, .Feat-Cont
+{
+    flex-wrap:wrap;
+    width: 70%;
+    padding: 2rem;
+    background-color:white;
+    border-radius:1rem;
+    margin:2rem;
+}
+
+.Contribute-Img
+{
+    width:12rem;
+    margin:2.5rem;
 }
 

@@ -1,6 +1,6 @@
 import "../uni.css";
 import "./Contribute.css";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus,FaMinus } from "react-icons/fa";
 import { useState } from "react";
 
 const supportTitles=["Financial Support","Material & Equipment Support","Mentorship Support","Logistics support"];
@@ -17,21 +17,66 @@ const whyUsTitles=["Global exposure through Formula Student Events.",
             "Foster relationship with educational institutions tobridge industry - academia gap.",
             "Platform to showcase support for International college level project while fulfilling CSR objectives."];
 
+const preSponerTitle=["GolchhaGroup","SolidWorks","Altair","Neoteric","Doro"];
+const featuredTitle=["OnlineKhabar","DekhaPadi","Kantipur","MountainTelevision","NayaPatrika","NepalLive","RatoPati","RONB"];
+
 function Contribute()
 {
 	return(
 		<div className="page Contribute flex-c-se-c">
         <span className="page-title">Support Us</span>
         <div className="Support-Cont flex-c-se-c">
-            <span className="sub-title">HERE IS HOW YOU CAN SUPPORT US</span>
+            <span className="sub-title" style={{color:'gray'}}>HERE IS HOW YOU CAN SUPPORT US</span>
             <SupportList />
         </div>
         <div className="Why-Us-Cont flex-c-se-c">
             <span className="sub-title">Why Partner with us?</span>
             <WhyUs />
         </div>
+        <div className="Pre-Sponser flex-c-se-c">
+            <span className="sub-title">OUR PREVIOUS SPONSORS</span>
+            <PreSponser />
+        </div>
+        <div className="Featured flex-c-se-c">
+            <span className="sub-title">Featured on</span>
+            <Featured />
+        </div>
     </div>
 	)
+}
+
+function Featured()
+{
+    const ImageExist = (name) =>
+    {
+        try {return require("../Images/Spon-Feat/Feat/"+name+".jpg")}
+        catch{return null}
+    }
+
+    return (
+        <div className="Feat-Cont flex-r-se-c">
+            {featuredTitle.map((title,ind)=>{
+                return <img className="Contribute-Img" src={ImageExist(title,ind)} alt="Feature Image" />
+            })}
+        </div>
+    )
+}
+
+function PreSponser()
+{
+    const ImageExist = (name)=>
+    {
+        try{return require("../Images/Spon-Feat/Spon/"+name+".jpg");}
+        catch{return null}
+    }
+
+    return (
+        <div className="Pre-Spon-Cont flex-r-se-c">
+            {preSponerTitle.map((title,ind)=>{
+                return <img className="Contribute-Img" src={ImageExist(title,ind)} alt="Sponser Image" />
+            })}
+        </div>
+    )
 }
 
 function WhyUs()
@@ -66,7 +111,7 @@ function List(props)
     }
     return (
         <li className="Supp-Item">
-            <div className="Supp-Title-Cont flex-r-sb-c"><span className="Supp-Title">{props.title}</span><FaPlus style={{color:'red',fontSize:'1rem'}} onClick={showMore} /></div>
+            <div className="Supp-Title-Cont flex-r-sb-c"><span className="Supp-Title">{props.title}</span>{!isActive?<FaPlus style={{color:'red',fontSize:'1rem'}} onClick={showMore} />:<FaMinus style={{color:'red',fontSize:'1rem'}} onClick={showMore} />}</div>
             {isActive?<span className="Supp-Desc">{supportDesc[props.ind]}</span>:""}
         </li>
     )
