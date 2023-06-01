@@ -1,18 +1,10 @@
-/* Just for safe */
+.Light .Footer{background-color: var(--main-alt-white);}
+.Dark .Footer {background-color: var(--main-alt-black);}
+
 .Footer
 {
-    padding:0.1rem;
+    padding:0.2rem;
     z-index:100;
-}
-
-.Light .Footer
-{
-    background-color: var(--main-alt-white);
-}
-
-.Dark .Footer 
-{
-    background-color: var(--main-alt-black);
 }
 
 .Footer-Content
@@ -21,18 +13,11 @@
     padding:2rem 0.5rem;
 }
 
-.Footer-Content .Footer-Title
+.Footer h2
 {
-    color:var(--main-theme-text-col);
     text-transform: uppercase;
-    font-weight: bold;
     margin:0.5rem;
 }
 
-.Footer-CR-Text
-{
-    font-weight:light;
-    letter-spacing:2px;
-    color:gray;
-    padding:2rem 0;
-}
+
+

@@ -10,12 +10,12 @@ const supportDesc=["Our partners can provide critical financial support during v
                     "As a Formula One team participating in international events, we require a professional logistics company to manage transportation, distribution, and travel ar rangements for our team. This includes importing parts and materials for development and ensuring smooth race car transportation to and from competi tions. A reliable logistics partner is critical to our suc cess in achieving our goals."];
 
 const whyUsTitles=["Global exposure through Formula Student Events.",
-            "Global exposure through Formula Student Events Promote motorsports culture & inspire STEM students.",
-            "Global exposure through Formula Student Events Directly engage with talented students.",
-            "Global exposure through Formula Student Events Access to a diverse talent pool for recruitment.",
-            "Global exposure through Formula Student Events Collaborate on R&D projects with expertise in simulation and engineering.",
-            "Foster relationship with educational institutions tobridge industry - academia gap.",
-            "Platform to showcase support for International college level project while fulfilling CSR objectives."];
+                    "Global exposure through Formula Student Events Promote motorsports culture & inspire STEM students.",
+                    "Global exposure through Formula Student Events Directly engage with talented students.",
+                    "Global exposure through Formula Student Events Access to a diverse talent pool for recruitment.",
+                    "Global exposure through Formula Student Events Collaborate on R&D projects with expertise in simulation and engineering.",
+                    "Foster relationship with educational institutions tobridge industry - academia gap.",
+                    "Platform to showcase support for International college level project while fulfilling CSR objectives."];
 
 const preSponerTitle=["GolchhaGroup","SolidWorks","Altair","Neoteric","Doro"];
 const featuredTitle=["OnlineKhabar","DekhaPadi","Kantipur","MountainTelevision","NayaPatrika","NepalLive","RatoPati","RONB"];
@@ -24,24 +24,12 @@ function Contribute()
 {
 	return(
 		<div className="page Contribute flex-c-se-c">
-        <span className="page-title">Support Us</span>
-        <div className="Support-Cont flex-c-se-c">
-            <span className="sub-title" style={{color:'gray'}}>HERE IS HOW YOU CAN SUPPORT US</span>
+            <h1 className="page-title">Support Us</h1>
             <SupportList />
-        </div>
-        <div className="Why-Us-Cont flex-c-se-c">
-            <span className="sub-title">Why Partner with us?</span>
             <WhyUs />
-        </div>
-        <div className="Pre-Sponser flex-c-se-c">
-            <span className="sub-title">OUR PREVIOUS SPONSORS</span>
             <PreSponser />
-        </div>
-        <div className="Featured flex-c-se-c">
-            <span className="sub-title">Featured on</span>
             <Featured />
         </div>
-    </div>
 	)
 }
 
@@ -54,11 +42,14 @@ function Featured()
     }
 
     return (
-        <div className="Feat-Cont flex-r-se-c">
-            {featuredTitle.map((title,ind)=>{
-                return <img className="Contribute-Img" src={ImageExist(title,ind)} alt="Feature Image" />
-            })}
-        </div>
+        <>
+            <h3 className="sub-title">Featured on</h3>
+            <div className="Feat-Cont flex-r-se-c">
+                {featuredTitle.map((title)=>{
+                    return <img className="Contribute-Img" src={ImageExist(title)} alt="Feature Image" />
+                })}
+            </div>
+        </>
     )
 }
 
@@ -71,48 +62,58 @@ function PreSponser()
     }
 
     return (
-        <div className="Pre-Spon-Cont flex-r-se-c">
-            {preSponerTitle.map((title,ind)=>{
-                return <img className="Contribute-Img" src={ImageExist(title,ind)} alt="Sponser Image" />
-            })}
-        </div>
+        <>
+            <h3 className="sub-title">OUR PREVIOUS SPONSORS</h3>
+            <div className="Pre-Spon-Cont flex-r-se-c">
+                {preSponerTitle.map((title)=>{
+                    return <img className="Contribute-Img" src={ImageExist(title)} alt="Sponser Image" />
+                })}
+            </div>
+        </>
     )
 }
 
 function WhyUs()
 {
     return (
-        <ul className="Why-Us-List">
-            {whyUsTitles.map((title)=>{
-            return <li className="text">{title}</li>
-            })}
-        </ul>
+        <>
+            <h3 className="sub-title">Why Partner with us?</h3>
+            <ul className="Why-Us-List flex-c-se-c">
+                {whyUsTitles.map((title)=>{
+                return <li className="WhyUs-Item text">{title}</li>
+                })}
+            </ul>
+        </>
     )
 }
 
 function SupportList()
 {
     return (
-        <ul className="Support-List flex-c-se-c">
-            {supportTitles.map((title,ind)=>{
-            return <List key={title} title={title} ind={ind}/>
-            })}
-        </ul>
+        <>
+            <h3 className="sub-title gray-text">HERE IS HOW YOU CAN SUPPORT US</h3>
+            <ul className="Support-List flex-c-se-c">
+                {supportTitles.map((title,ind)=>{
+                return <SuppList key={title} title={title} ind={ind}/>
+                })}
+            </ul>
+        </>
     )
 }
 
-function List(props)
+function SuppList(props)
 {
     const [isActive,setIsActive]=useState(false);
 
-    function showMore()
+    function switchActive()
     {
         setIsActive(val=>!val);
     }
+    
     return (
         <li className="Supp-Item">
-            <div className="Supp-Title-Cont flex-r-sb-c"><span className="Supp-Title">{props.title}</span>{!isActive?<FaPlus style={{color:'red',fontSize:'1rem'}} onClick={showMore} />:<FaMinus style={{color:'red',fontSize:'1rem'}} onClick={showMore} />}</div>
-            {isActive?<span className="Supp-Desc">{supportDesc[props.ind]}</span>:""}
+            <div className="Supp-Title-Cont flex-r-sb-c"><span>{props.title}</span>{!isActive?<FaPlus onClick={switchActive} />:<FaMinus onClick={switchActive} />}</div>
+            {isActive?<p className="Supp-Desc">{supportDesc[props.ind]}</p>:""}
         </li>
     )
 }

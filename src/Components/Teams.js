@@ -3,7 +3,7 @@ import "./Teams.css";
 import Cards from './Cards';
 
 // will contain all the information of the team members in one var and pass to cards
-// Format is as : image, name, department, email, socials
+// Format is as : name, department, email, socials
 const teamMembersInfo=[["Rohit Pati", "Management", "rohit.075bme031@tcioe.edu.np" ,"https://www.linkedin.com/in/rohit_pati"],
                       ["Abhishek Kandel", "Management","email-field"],
                       ["Bibek Sharma", "Communication", "sharmabibek880@gmail.com" ,"https://www.linkedin.com/in/bibek-sharma-560a55239"],
@@ -36,7 +36,7 @@ const teamMembersInfo=[["Rohit Pati", "Management", "rohit.075bme031@tcioe.edu.n
 function Teams() {
   return (
     <div className="page Team-Members flex-c-se-c">
-        <span className="page-title">Meet Our Team Members</span>
+        <h1 className="page-title">Meet Our Team Members</h1>
         <Cards cardObjects={teamMembersInfo} />
     </div>
   )

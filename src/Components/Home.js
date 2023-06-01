@@ -10,9 +10,9 @@ function Home() {
         <div className="Gallary-Cont">
             <img src={GroupPhoto} alt="Group Photo"/>
         </div>
-        <span className="page-title">Team Shireto</span>
-        <span className="sub-title">Pushing Limits, CHASING VICTORY</span>
-        <span className="Desc-Text">{teamDesc}</span>
+        <h1 className="page-title">Team Shireto</h1>
+        <h3 className="sub-title">Pushing Limits, CHASING VICTORY</h3>
+        <p className="Desc-Text">{teamDesc}</p>
     </div>
   )
 }

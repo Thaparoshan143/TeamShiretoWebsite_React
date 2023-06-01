@@ -1,5 +1,5 @@
-.Light .Home-Page{background-color: white;}
-.Dark .Home-Page{background-color: black;}
+.Light .Home-Page{background-color: var(--main-white);}
+.Dark .Home-Page{background-color: var(--main-black);}
 
 .Home-Page
 {
@@ -16,11 +16,9 @@
 
 .Home-Page .page-title
 {
-    font-family: 'Barlow', sans-serif;
     font-size: 6em;
-    padding-top:9rem;
+    margin-top:8rem;
     z-index: 1;
-    transition:0.5s;
 }
 
 .Home-Page .sub-title

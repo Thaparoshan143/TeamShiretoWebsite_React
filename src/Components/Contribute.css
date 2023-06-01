@@ -1,4 +1,3 @@
-
 .Dark .Contribute{background-color: var(--main-black);}
 .Light .Contribute{background-color: var(--main-white);}
 
@@ -10,25 +9,19 @@
     margin:3.2rem 0 0.2rem 0;
 }
 
-.Support-Cont, .Why-Us-Cont
-{
-    width: 85%;
-    padding:0.2rem;
-}
-
 .Support-List, .Why-Us-List
 {
-    border-radius:10px;
-    background-color: rgba(125,125,125,0.3);
+    background-color: rgba(125,125,125,0.25);
     margin:2rem 0;
-    width: 100%;
+    width: 90%;
     padding:1rem;
+    font-size:1.2rem;
 }
 
-.Supp-Item
+.Supp-Item, .WhyUs-Item
 {
     width: 90%;
-    margin:1rem;
+    margin:0.8rem;
     border-bottom:2px solid red;
     padding:1rem;
 }
@@ -37,32 +30,23 @@
 {
     font-size:1.5rem;
     font-weight:bolder;
-    width: 100%;
-    margin-bottom:0.5rem;
 }
 
 .Supp-Desc
 {
-    transition:0.5s;
     font-size: 1.4rem;
-    font-family: 'bralow';
-}
-
-.Why-Us-List li
-{
-    font-size: 1.2rem;
-    margin:1rem;
-    border-bottom: 2px dashed red;
+    font-weight:lighter;
+    padding:1rem 0;
+    text-align: justify;
 }
 
 .Pre-Spon-Cont, .Feat-Cont
 {
     flex-wrap:wrap;
-    width: 70%;
+    width: 80%;
     padding: 2rem;
     background-color:white;
-    border-radius:1rem;
-    margin:2rem;
+    margin:2rem 0;
 }
 
 .Contribute-Img

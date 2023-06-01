@@ -1,35 +1,10 @@
+.Light .NavBar{background-color: var(--main-white);}
+.Dark .NavBar{background-color: var(--main-black);}
+
 :root
 {
     --item-font-size:1em;
 }
-
-.Logo-Cont img
-{
-    width:2.8rem;
-    margin-right:40vw;
-    /* animation:rotateImg 10s infinite; */
-}
-/* 
-@keyframes rotateImg
-{
-    0%
-    {
-        transform:rotateZ(-20deg);
-    }
-
-    60%
-    {
-        transform:rotateZ(360deg);
-    }
-
-    100%
-    {
-        transform:rotateZ(340deg);
-    }
-} */
-
-.Light .NavBar{background-color: var(--main-white);}
-.Dark .NavBar{background-color: var(--main-black);}
 
 .NavBar
 {
@@ -39,7 +14,13 @@
     padding:0.4rem;
 }
 
-.Nav-Items
+.Logo-Cont img
+{
+    width:2.8rem;
+    margin-right:40vw;
+}
+
+.NavBar
 {
     padding-right:2rem;
 }
@@ -50,16 +31,14 @@
     color:var(--main-theme-text-alt-col);
     padding:1.2rem 0.4rem;
     cursor:pointer;
-    font-weight: bolder;
+    font-weight: bold;
     transition:color,transform 0.4s;
-    background-color: transparent;
 }
 
 /* When active link then have underline below */
 .Nav-Item.active.pse-ul-theme::before
 {
-    width: 100%;
-    left:0%;
+    width:100%;
 }
 
 .Nav-Item.active

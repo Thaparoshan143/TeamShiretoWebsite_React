@@ -1,3 +1,5 @@
+.Light .Mode-Btn{background-color: var(--main-black);color:var(--main-white);}
+.Dark .Mode-Btn{background-color: var(--main-white);color:var(--main-black);}
 
 .Mode-Btn
 {
@@ -9,20 +11,6 @@
     border-radius:8px;
     padding:0.4rem 0.5rem;
     border: none;
-}
-
-.Light .Mode-Btn
-{
-    background-color: black;
-}
-
-.Dark .Mode-Btn
-{
-    background-color: white;
-}
-
-.Mode-Btn .Mode-Icon
-{
     font-size: 1.2rem;
 }
 
