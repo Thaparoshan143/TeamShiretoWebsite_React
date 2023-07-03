@@ -9,10 +9,11 @@
     border-radius:20px;
     padding:1rem 0rem;
     width: 28%;
+    height: 40vh;
     transition:0.5s;
 }
 
-.Res-Part:hover{transform:scale(1.05);}
+.Res-Part:hover{transform:scale(1.02);}
 
 .Res-Part .sub-title
 {
@@ -36,7 +37,7 @@
 
 .Resources .Gallery-Cont img
 {
-    width: 23rem;
+    width:100%;
     margin:2rem 0;
 }
 
@@ -53,6 +54,19 @@
 
 .News-Cont .News:hover, .Blog-Sec .Blog:hover
 {
-    padding-right:20%;
+    padding-right:30%;
+}
+
+@media screen and (max-width:1000px) {
+    .Resources
+    {
+        flex-direction: column;
+    }
+    .Res-Part
+    {
+        margin:2rem;
+        width: 80%;
+        padding:2rem 0;
+    }
 }
 

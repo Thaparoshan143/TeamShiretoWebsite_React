@@ -1,38 +1,29 @@
-.Light .NavBar{background-color: var(--main-white);}
-.Dark .NavBar{background-color: var(--main-black);}
-
-:root
-{
-    --item-font-size:1em;
-}
+.Light .NavBar{background-color: var(--main-alt-white);}
+.Dark .NavBar{background-color: var(--main-alt-black);}
 
 .NavBar
 {
     position:fixed;
     z-index:100;
     width: 100%;
-    padding:0.4rem;
 }
 
 .Logo-Cont img
 {
-    width:2.8rem;
-    margin-right:40vw;
-}
-
-.NavBar
-{
-    padding-right:2rem;
+    margin:2rem 0;
+    width:28rem;
 }
 
 .Nav-Item
 {
-    font-size:var(--item-font-size);
+    font-size: 1.2rem;
     color:var(--main-theme-text-alt-col);
-    padding:1.2rem 0.4rem;
+    padding:1.2rem 0.3rem;
+    margin:0.6rem 0.1rem;
     cursor:pointer;
     font-weight: bold;
     transition:color,transform 0.4s;
+    width: 100%;
 }
 
 /* When active link then have underline below */
@@ -49,5 +40,48 @@
 .Nav-Item:hover
 {
     color:var(--main-theme-text-col);
-    transform:scaleX(1.1);
+    transform:scaleX(1.05);
+}
+
+.Menu-Items
+{
+    width:100%;
+}
+
+.Menu-Items,.Nav-Items{
+    flex-direction: column;
+}
+
+.NavBar
+{
+    position:relative;
+}
+
+@media screen and (min-width:800px)
+{
+    .NavBar
+    {
+        height: fit-content;
+    }
+
+    .Logo-Cont img
+    {
+        margin:0rem;
+        width:2.8rem;
+    }
+
+    .Menu-Items,.Nav-Items{
+        flex-direction: row;
+    }
+    .Menu-Items
+    {
+        width: 65%;
+        margin-right: 3rem;
+    }
+    .Nav-Item
+    {
+        font-size: 1rem;
+        margin: 0 0.3rem;
+        width: fit-content;
+    }
 }

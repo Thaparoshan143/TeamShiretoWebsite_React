@@ -5,7 +5,6 @@ import { FaFacebook,FaLinkedin,FaYoutube } from "react-icons/fa";
 
 const socialLinksTitle=["Facebook","Linkedin","Youtube"];
 const socialLinksURL=["https://www.facebook.com/teamshireto/","https://www.linkedin.com/company/team-shireto/","https://www.youtube.com/@teamshireto1629/featured"];
-const socialIcon=[FaFacebook,FaLinkedin,FaYoutube];
 const quickLinksTitle=["References","Events","Contact Us"];
 
 function Footer()
@@ -34,7 +33,7 @@ function Socials()
 {
 	return (
 		<ul className="Footer-Socials flex-c-se-c">
-			<h2>Follow us on :</h2>
+			<h2>Follow us on</h2>
 			{socialLinksTitle.map((link,ind)=>{
 				return <SocialIcon link={link} ind={ind}/>
 			})}
@@ -53,7 +52,7 @@ function QuickLinks()
 {
 	return (
 		<div className="flex-c-se-c">
-		<h2>Quick Links :</h2>
+		<h2>Quick Links</h2>
 		<ul className="Links flex-r-se-c">
 			{quickLinksTitle.map((qLink)=>{
 				return <Link key={qLink} to={"/"+qLink} className="item">{qLink}</Link>

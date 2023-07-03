@@ -17,14 +17,16 @@ function NavBar()
 function NavItems()
 {
 	return (
-		<ul className="Nav-Items flex-r-se-c">
+		<ul className="Nav-Items flex-r-sb-c">
 			<div className="Logo-Cont"><NavLink to="/Home"><img alt="logo" src={logo} /></NavLink></div>
+			<div className="flex-r-se-c Menu-Items">
 			{
 				navItemList.map((iName)=>
 				{
 					return <NavItem key={iName} itemName={iName}/>
 				})
 			}
+			</div>
 		</ul>
 	)
 }

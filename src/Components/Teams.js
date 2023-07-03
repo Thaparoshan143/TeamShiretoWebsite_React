@@ -36,7 +36,7 @@ const teamMembersInfo=[["Rohit Pati", "Management", "rohit.075bme031@tcioe.edu.n
 function Teams() {
   return (
     <div className="page Team-Members flex-c-se-c">
-        <h1 className="page-title">Meet Our Team Members</h1>
+        <h1 className="sub-title">Meet Our Team Members</h1>
         <Cards cardObjects={teamMembersInfo} />
     </div>
   )

@@ -3,20 +3,36 @@
 
 .Footer
 {
-    padding:0.2rem;
     z-index:100;
 }
 
 .Footer-Content
 {
+    flex-direction: column;
+    height: 60vh;
     width:100%;
     padding:2rem 0.5rem;
 }
 
 .Footer h2
 {
+    font-size:1.4rem;
     text-transform: uppercase;
     margin:0.5rem;
+}
+
+.Footer h2::first-letter
+{
+    font-size: 2.5rem;
+}
+
+@media screen and (min-width:800px)
+{
+    .Footer-Content
+    {
+        flex-direction: row;
+        height: fit-content;
+    }
 }
 
 
