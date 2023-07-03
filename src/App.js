@@ -10,14 +10,13 @@ import ContactUs from "./Components/ContactUs";
 import References from "./Components/References";
 import Events from "./Components/Events";
 import Footer from "./Components/Footer";
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import {FaMoon,FaLightbulb} from 'react-icons/fa';
 
 function App() {
 
 	// For Light Mode and Dark Mode in Website
 	const [isDark,setIsDark]=useState(true);
-	const [NavStyle,setNavStyle]=useState('block');
 
 	function changeMode()
 	{
@@ -35,7 +34,7 @@ function App() {
 				<Route path="/Teams" element={<Teams />}/>
 				<Route path="/Resources" element={<Resources />} />
 				<Route path="/Our Projects" element={<OurProjects />} />
-				<Route path="/Contribute" element={<Contribute />} />
+				<Route path="/Paternship" element={<Contribute />} />
 				<Route path="/Contact Us" element={<ContactUs />} />
 				<Route path="/References" element={<References />} />
 				<Route path="/Events" element={<Events />} />
