@@ -1,9 +1,12 @@
 .Light .NavBar{background-color: var(--main-alt-white);}
 .Dark .NavBar{background-color: var(--main-alt-black);}
 
+nav
+{
+    position: relative;
+}
 .NavBar
 {
-    position:fixed;
     z-index:100;
     width: 100%;
 }
@@ -12,6 +15,13 @@
 {
     margin:2rem 0;
     width:28rem;
+    transition:0.5s;
+}
+
+.Logo-Cont img:hover
+{
+    transform:scale(0.95);
+    transform:rotate(180deg);
 }
 
 .Nav-Item
@@ -52,13 +62,12 @@
     flex-direction: column;
 }
 
-.NavBar
-{
-    position:relative;
-}
-
 @media screen and (min-width:800px)
 {
+    nav
+    {
+        position:fixed;
+    }
     .NavBar
     {
         height: fit-content;
@@ -75,7 +84,7 @@
     }
     .Menu-Items
     {
-        width: 65%;
+        width: 70%;
         margin-right: 3rem;
     }
     .Nav-Item

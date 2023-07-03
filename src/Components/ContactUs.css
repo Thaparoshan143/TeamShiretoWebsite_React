@@ -19,8 +19,8 @@
 .About-Us .About-Text
 {
     margin:2rem 0;
-    font-size:1.8rem;
-    line-height: 3rem;
+    font-size:1.5rem;
+    line-height: 2.5rem;
     font-weight: lighter;
     text-align:justify;
 }
@@ -44,7 +44,7 @@
 
 .Socials .btn
 {
-    font-size:4rem;
+    font-size:2.5rem;
 }
 
 .Socials .btn:hover
@@ -53,3 +53,37 @@
     background-color: var(--main-theme-bg-col);
 }
 
+@media screen and (max-width:800px) {
+    .Contact .page-title
+    {
+        font-size:2.5rem;
+    }
+    .Contact-Text .gray-text
+    {
+        font-size: 1.3rem;
+    }
+    .Socials
+    {
+        width: 100%;
+    }
+    .Socials .btn
+    {
+        font-size: 1rem;
+    }
+    .About-Us
+    {
+        padding:1.2rem;
+        margin:5rem 1rem;
+    }
+    .About-Us .page-title
+    {
+        font-size: 2rem;
+    }
+
+    .About-Us .About-Text
+    {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+}

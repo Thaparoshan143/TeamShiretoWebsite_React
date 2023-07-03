@@ -1,4 +1,4 @@
-import { Routes,Route } from 'react-router-dom';
+import { Routes,Route, useAsyncError } from 'react-router-dom';
 import './App.css';
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
@@ -10,13 +10,14 @@ import ContactUs from "./Components/ContactUs";
 import References from "./Components/References";
 import Events from "./Components/Events";
 import Footer from "./Components/Footer";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {FaMoon,FaLightbulb} from 'react-icons/fa';
 
 function App() {
 
 	// For Light Mode and Dark Mode in Website
 	const [isDark,setIsDark]=useState(true);
+	const [NavStyle,setNavStyle]=useState('block');
 
 	function changeMode()
 	{
@@ -26,7 +27,7 @@ function App() {
 	return (
 		<div className={"App "+(isDark?"Dark":"Light")}>
 			<button onClick={changeMode} className="Mode-Btn">{isDark?<FaLightbulb className="Mode-Icon"/>:<FaMoon className="Mode-Icon" />}</button>
-			<NavBar />
+			<NavBar/>
 			<Routes>
 				{/* Default Landing Page is Home Page */}
 				<Route path="*" element={<Home />} />

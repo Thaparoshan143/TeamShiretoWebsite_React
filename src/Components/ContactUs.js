@@ -11,13 +11,13 @@ function ContactUs()
 	return(
 		<div className="page Contact-Wrapper flex-c-se-c">
             <div className="Contact flex-c-se-c">
-                <h1 className="page-title">Get In Touch with us </h1>
-                <h2 className="gray-text Contact-Text">Email : shiretoioe@gmail.com</h2>
+                <h1 className="page-title gray-text">Get In Touch with us </h1>
+                <h2 className="Contact-Text">Email : shiretoioe@gmail.com</h2>
                 <div className="Contact-Text flex-c-se-c">
-                    TEAM MANAGER - ROHIT PATI
-                    <h2 className="sub-title gray-text">9843369553</h2>
-                    PARTNERSHIP MANAGER - BIBEK SHARMA
-                    <h2 className="sub-title gray-text">9868990797</h2>
+                    <span className="gray-text">TEAM MANAGER - ROHIT PATI</span>
+                    <h2 className="sub-title">9843369553</h2>
+                    <span className="gray-text">PARTNERSHIP MANAGER - BIBEK SHARMA</span>
+                    <h2 className="sub-title">9868990797</h2>
                 </div>
             <SocialButton />
             </div>

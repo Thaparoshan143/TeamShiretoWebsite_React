@@ -14,8 +14,9 @@
     background-color: rgba(125,125,125,0.25);
     margin:2rem 0;
     width: 90%;
-    padding:1rem;
+    padding:4rem 1rem;
     font-size:1.2rem;
+    text-align: left;
 }
 
 .Supp-Item, .WhyUs-Item
@@ -55,3 +56,20 @@
     margin:2.5rem;
 }
 
+@media screen and (max-width:800px) {
+    .Contribute-Img
+    {
+        width:8rem;
+        margin:1rem;
+    }
+    .Pre-Spon-Cont, .Feat-Cont
+    {
+        width: 95%;
+    }
+
+    .Support-List, .Why-Us-List
+    {
+        font-size: 1rem;
+    }
+
+}

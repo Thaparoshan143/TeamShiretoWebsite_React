@@ -4,6 +4,12 @@
 .Light .Stage-Cont{color:black;}
 .Dark .Stage-Cont{color:white;}
 
+.Timeline-Cont
+{
+    width: 100%;
+    margin-bottom:5rem;    
+}
+
 .Design-Img
 {
     width:80%;
@@ -13,12 +19,13 @@
 
 .Design-Img:hover
 {
-    transform:scale(1.02);
+    transform:scale(1.01);
+    box-shadow: 0 0 20px 1px var(--main-theme-bg-col);
 }
 
 .Stage-Cont
 {
-    min-width:40vw;
+    width: 90%;
     background-color:var(--main-theme-bg-col);
     padding:1rem 0;
     margin:0.5rem 0;
@@ -35,6 +42,14 @@
 .Stage-Cont .sub-title
 {
     margin:0.3rem;
+}
+
+@media screen and (min-width:800px)
+{
+    .Stage-Cont
+    {
+        width: 50rem;
+    }
 }
 
 

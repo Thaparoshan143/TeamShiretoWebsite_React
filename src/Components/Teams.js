@@ -37,6 +37,8 @@ function Teams() {
   return (
     <div className="page Team-Members flex-c-se-c">
         <h1 className="sub-title">Meet Our Team Members</h1>
+        <br />
+        <h1 className="sub-title gray-text">Team 2023</h1>
         <Cards cardObjects={teamMembersInfo} />
     </div>
   )

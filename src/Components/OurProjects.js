@@ -1,6 +1,7 @@
 import "../uni.css";
 import "./OurProjects.css";
 import FrontLook from "../Images/DesignImage/FrontView.jpg";
+import TopLook from "../Images/DesignImage/AlmostTop.jpg";
 
 class Progress
 {
@@ -41,8 +42,10 @@ function RenderedImage()
 {
 	return (
 		<>
-			<h3 className="sub-title">Front Rendered Image</h3>
-			<img className="Design-Img" src={FrontLook} />	
+			<h3 className="sub-title">Few Rendered Image</h3><br />
+			<span className="gray-text">Front View</span><img className="Design-Img" src={FrontLook} />	
+			<span className="gray-text">Almost Top View</span><img className="Design-Img" src={TopLook} />	
+
 		</>
 	)
 }
@@ -51,7 +54,7 @@ function TimeLine()
 {
 	return (
 		<div className="Timeline-Cont flex-c-se-c">
-			<h3 className="sub-title gray-text" style={{margin:'1rem'}}>Our Timeline</h3>
+			<h3 className="sub-title gray-text" style={{margin:'3rem'}}>Our Estimated Timeline</h3>
 			<Stages />
 		</div>
 	)
@@ -62,7 +65,7 @@ function Stages()
 	return (
 		<>
 			{stagesInfo.map((stageInfo,ind)=>{
-				return <><Stage key={ind} stageInfo={stageInfo} /> &#8595;</>
+				return <><Stage key={ind} stageInfo={stageInfo} /><br /></>
 			})}
 		</>
 	)
