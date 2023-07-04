@@ -24,7 +24,7 @@ function Contribute()
 {
 	return(
 		<div className="page Contribute flex-c-se-c">
-            <h1 className="page-title">Paternship With Us</h1>
+            <h1 className="page-title">Parternship With Us</h1>
             <SupportList />
             <WhyUs />
             <PreSponser />

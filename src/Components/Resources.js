@@ -12,7 +12,7 @@ function Resources() {
         <div className="Res-Part Gallery-Cont flex-c-se-c">
           <h3 className="sub-title">Gallery</h3>
           <img src={GroupPhoto} alt="groupphoto" />
-          <button className="btn">See More</button>
+          <a className="btn" href={'./Gallary'}>See More</a>
         </div>
         <News />
         <Blogs />
@@ -23,14 +23,12 @@ function Resources() {
 function Blogs()
 {
   return (
-    <div className="Res-Part Blog-Cont">
-      <div className="Blog-Sec flex-c-se-c">
+    <div className="Res-Part Blog-Cont flex-c-se-c">
         <h3 className="sub-title">Blog</h3>
         {blogsTitle.map((title)=>{
           return <li className="Blog">{title}</li>
         })}
-        <button className="btn">More Blog</button>
-      </div> 
+        <a className="btn" href={"./References"}>More Blog</a>
     </div>
   )
 }
@@ -38,14 +36,12 @@ function Blogs()
 function News()
 {
   return (
-    <div className="Res-Part News-Cont">
-      <div className="News-Sec flex-c-se-c">
+    <div className="Res-Part News-Cont flex-c-se-c">
         <h3 className="sub-title">News</h3>
         {newsTitle.map((title)=>{
           return <li className="News">{title}</li>
         })}
-        <button className="btn">More News</button>
-      </div>
+        <a className="btn" href={"./References"}>More News</a>
     </div>
   )
 }

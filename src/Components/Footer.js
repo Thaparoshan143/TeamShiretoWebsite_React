@@ -35,7 +35,7 @@ function Socials()
 		<ul className="Footer-Socials flex-c-se-c">
 			<h2>Follow us on</h2>
 			{socialLinksTitle.map((link,ind)=>{
-				return <SocialIcon link={link} ind={ind}/>
+				return <SocialIcon key={ind} link={link} ind={ind}/>
 			})}
 		</ul>
 	)

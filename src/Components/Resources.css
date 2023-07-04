@@ -7,7 +7,6 @@
 .Res-Part
 {
     border-radius:20px;
-    padding:1rem 0rem;
     width: 28%;
     min-height: 40vh;
     transition:0.5s;
@@ -25,6 +24,7 @@
 .Res-Part .btn
 {
     color:white;
+    margin:1rem 0;
     background-color: var(--theme-btn-bg-hov-col);
 }
 
@@ -41,7 +41,7 @@
     margin:2rem 0;
 }
 
-.News-Cont .News, .Blog-Sec .Blog
+.News-Cont .News, .Blog-Cont .Blog
 {
     text-align: center;
     width: 100%;
@@ -52,7 +52,7 @@
     cursor:pointer;
 }
 
-.News-Cont .News:hover, .Blog-Sec .Blog:hover
+.News-Cont .News:hover, .Blog-Cont .Blog:hover
 {
     padding-right:30%;
 }

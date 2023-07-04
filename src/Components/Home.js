@@ -7,7 +7,7 @@ const teamDesc=["We are a dynamic student-led group of motorsport enthusiasts fr
 function Home() {
   return (
     <div className="page Home-Page flex-c-se-c">
-        <div className="Gallary-Cont">
+        <div className="Home-Gallary-Cont">
             <img src={GroupPhoto} alt="Group Photo"/>
         </div>
         <h1 className="page-title">Team Shireto</h1>

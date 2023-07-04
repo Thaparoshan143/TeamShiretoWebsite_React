@@ -15,7 +15,8 @@ nav
 .Logo-Cont img
 {
     margin:2rem 0;
-    width:28rem;
+    width:100%;
+    max-width: 28rem;
     transition:0.5s;
 }
 

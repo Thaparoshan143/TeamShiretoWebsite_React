@@ -25,10 +25,10 @@
     text-align:justify;
 }
 
-.Contact
+
+.Contact, .Contact-People
 {
     width: 100%;
-    margin:3rem;
 }
 
 .Contact h2 
@@ -42,9 +42,14 @@
     font-size:1.7rem;
 }
 
+.Contact-People .Card-Cont
+{
+    width: 35%;
+}
+
 .Socials .btn
 {
-    font-size:2.5rem;
+    font-size:2.1rem;
 }
 
 .Socials .btn:hover
@@ -65,10 +70,19 @@
     .Socials
     {
         width: 100%;
+        flex-direction: column;
     }
     .Socials .btn
     {
         font-size: 1rem;
+    }
+    .Contact-People
+    {
+        flex-direction: column;
+    }
+    .Contact-People .Card-Cont
+    {
+        width: 80%;
     }
     .About-Us
     {
@@ -79,11 +93,9 @@
     {
         font-size: 2rem;
     }
-
     .About-Us .About-Text
     {
         font-size: 1.1rem;
         line-height: 1.5rem;
     }
-
 }

@@ -15,7 +15,7 @@ function Cards(props) {
 }
 
 // This card is for team member only, components are on that basis so..
-function Card(props)
+export function Card(props)
 {
     const MemberImageExist= ()=>
     {
@@ -33,8 +33,8 @@ function Card(props)
             <li className="sub-title Member-Depart">{cardObject[1]}</li>
             <li className="text">{cardObject[2]}</li>
             <div className="Socials flex-row-evenly">
-                <a href={cardObject[3]} target="_blank"><FaLinkedinIn className="Social-Icon"/></a>
-                <a href={cardObject[4]} target="_blank"><FaFacebookF className="Social-Icon" /></a>
+                {(cardObject[3])!=""|| cardObject[3]==undefined?<a href={cardObject[3]} target="_blank"><FaLinkedinIn className="Social-Icon"/></a>:<></>}
+                {(cardObject[4])!=""|| cardObject[4]==undefined?<a href={cardObject[4]} target="_blank"><FaFacebookF className="Social-Icon" /></a>:<></>}
             </div>
         </div>
     )

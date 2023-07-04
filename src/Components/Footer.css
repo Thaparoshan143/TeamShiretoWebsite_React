@@ -3,13 +3,13 @@
 
 .Footer
 {
-    z-index:100;
+    z-index:1000;
 }
 
 .Footer-Content
 {
     flex-direction: column;
-    height: 60vh;
+    min-height: 60vh;
     width:100%;
     padding:2rem 0.5rem;
 }
@@ -31,6 +31,7 @@
     .Footer-Content
     {
         flex-direction: row;
+        min-height: 20vh;
         height: fit-content;
     }
 }
