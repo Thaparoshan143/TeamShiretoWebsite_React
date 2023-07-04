@@ -1,0 +1,49 @@
+.Light .Gallary{background-color: var(--main-white);}
+.Dark .Gallary{background-color: var(--main-black);}
+
+.Gallary-Cont
+{
+    position: inherit;
+    display: grid;
+    grid-template-columns:auto auto auto;
+    gap: 2rem;
+    margin:2rem 0;
+    background-color: inherit;
+}
+
+.Gallary-Photo
+{
+    max-width: 30rem;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.Gallary-Photo.More-Space
+{
+    min-width: 35vw;
+}
+
+.Gallary-Photo:hover
+{
+    transform: scale(1.03);
+}
+
+@media screen and (max-width:1200px) {
+    .Gallary-Cont
+    {
+        grid-template-columns: auto auto;
+    }
+
+    .Gallary-Photo
+    {
+        max-width: 20rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .Gallary-Cont
+    {
+        grid-template-columns: auto;
+    }
+}
+
