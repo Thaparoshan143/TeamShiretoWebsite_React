@@ -422,3 +422,51 @@ export const _MemberInfo = [
         ],
     }
 ]
+
+export const _PartnersContact = [
+    {
+        name : "Bibek Sharma",
+        position : "Communication",
+        email : "sharmabibek880@gmail.com",
+        socials : [
+            {
+                media : "Facebook",
+                url : "",
+            },
+            {
+                media : "Linkedin",
+                url : "https://www.linkedin.com/in/bibek-sharma-560a55239",
+            }
+        ],
+    },
+    {
+        name : "Aashish Pant",
+        position : "Communication",
+        email : "aashishpnt@gmail.com",
+        socials : [
+            {
+                media : "Facebook",
+                url : "",
+            },
+            {
+                media : "Linkedin",
+                url : "https://www.linkedin.com/in/aashish-pant-96b305186/",
+            }
+        ],
+    },
+    {
+        name : "Birat Poudel",
+        position : "Communication",
+        email : "poudel.birat25@gmail.com",
+        socials : [
+            {
+                media : "Facebook",
+                url : "",
+            },
+            {
+                media : "Linkedin",
+                url : "https://www.linkedin.com/in/birat-poudel-6562ba16b/",
+            }
+        ],
+    }
+]

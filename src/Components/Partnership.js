@@ -4,16 +4,21 @@ import { FaPlus,FaMinus } from "react-icons/fa";
 import { useState } from "react";
 import { _SupportInfo, _WhyUsInfo, _SponserInfo, _FeaturedInfo } from "../Data/PartnershipInfo";
 
-
 function Partnership()
 {
 	return(
 		<div className="page Partnership flex-c-se-c">
-            <h1 className="page-title">Parternship With Us</h1><br />
             <SupportList />
             <WhyUs />
             <PreSponser />
             <Featured />
+            <div className="Part-Que">
+                <h1 className="page-title Que-Text">Do you want to become a partner?</h1>
+                <div className="Que-Btns flex-r-se-c">
+                <a href={"https://teamshireto.com/wp-content/uploads/2023/05/Team-Shireto-Partnership-Proposal.pdf"} className="btn">Download Proposal</a>
+                <a href="mailto:info@teamshireto.com" className="btn">Become a Sponsor!</a>
+                </div>
+            </div>
         </div>
 	)
 }
@@ -22,7 +27,7 @@ function SupportList()
 {
     return (
         <>
-            <h3 className="sub-title gray-text">HERE IS HOW YOU CAN SUPPORT US</h3>
+            <h2 className="sub-title">Here is how you can support us</h2>
             <ul className="Support-List flex-c-se-c">
                 {_SupportInfo.map(({title, description})=>{
                 return <SuppList key={title} title={title} description={description} />
@@ -67,13 +72,13 @@ function PreSponser()
 {
     const ImageExist = (item)=>
     {
-        try{return require("../Images/Spon-Feat/Spon/"+item+".jpg");}
-        catch{return null}
+        try {return require("../Images/Spon-Feat/Spon/"+item+".jpg");}
+        catch {return null}
     }
 
     return (
         <>
-            <h3 className="sub-title">OUR PREVIOUS SPONSORS</h3>
+            <h3 className="sub-title gray-text">OUR PREVIOUS SPONSORS</h3>
             <div className="Pre-Spon-Cont flex-r-se-c">
                 {_SponserInfo.map((item)=>{
                     return <img className="Partnership-Img" src={ImageExist(item)} alt="Sponser Image" />
@@ -88,12 +93,12 @@ function Featured()
     const ImageExist = (item) =>
     {
         try {return require("../Images/Spon-Feat/Feat/"+item+".jpg")}
-        catch{return null}
+        catch {return null}
     }
 
     return (
         <>
-            <h3 className="sub-title">Featured on</h3>
+            <h3 className="sub-title gray-text">Featured on</h3>
             <div className="Feat-Cont flex-r-se-c">
                 {_FeaturedInfo.map((item)=>{
                     return <img className="Partnership-Img" src={ImageExist(item)} alt="Feature Image" />
