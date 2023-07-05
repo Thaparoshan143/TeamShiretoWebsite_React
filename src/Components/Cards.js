@@ -1,40 +1,37 @@
 import React from 'react';
 import "./Cards.css";
 import {FaFacebookF,FaLinkedinIn} from "react-icons/fa";
+import { _MemberInfo } from '../Data/TeamInfo';
 
-function Cards(props) {
-    const cardObjects=props.cardObjects;
-
+function Cards() {
   return (
     <div className="Cards-Wrapper flex-r-se-c">
-        {cardObjects.map((obj,ind)=>{
-            return <Card key={ind} obj={obj} />
+        {_MemberInfo.map(({name, position, email, socials})=>{
+            return <Card key={name} name={name} position={position} email={email} socials={socials} />
         })}
     </div>
   )
 }
 
 // This card is for team member only, components are on that basis so..
-export function Card(props)
+export function Card({name, position, email, socials})
 {
     const MemberImageExist= ()=>
     {
-        try{return require("../Images/Team Members/"+cardObject[0]+".jpg");}
+        try{return require("../Images/Team Members/"+name+".jpg");}
         catch{return null}
     }
     
-    const cardObject=props.obj;
-
     return (
         <div className="Card-Cont flex-c-se-c">
            {/* use tryRequire if not sure team member photo exists or not */}
-           <img className="Member-Photo" src={MemberImageExist()?MemberImageExist():""} alt="Member Photo" />
-            <li className="text">{cardObject[0]}</li>
-            <li className="sub-title Member-Depart">{cardObject[1]}</li>
-            <li className="text">{cardObject[2]}</li>
+           <img className="Mem-Photo" src={MemberImageExist()?MemberImageExist():""} alt="Member Photo" />
+            <li className="text">{name}</li>
+            <li className="sub-title Mem-Pos">{position}</li>
+            <li className="text">{email}</li>
             <div className="Socials flex-row-evenly">
-                {(cardObject[3])!=""|| cardObject[3]==undefined?<a href={cardObject[3]} target="_blank"><FaLinkedinIn className="Social-Icon"/></a>:<></>}
-                {(cardObject[4])!=""|| cardObject[4]==undefined?<a href={cardObject[4]} target="_blank"><FaFacebookF className="Social-Icon" /></a>:<></>}
+                {socials[0].media!==""?<a href={socials[0].url} target="_blank"><FaFacebookF className="Social-Icon" /></a>:<></>}
+                {socials[1].media!==""?<a href={socials[1].url} target="_blank"><FaLinkedinIn className="Social-Icon"/></a>:<></>}
             </div>
         </div>
     )

@@ -8,41 +8,39 @@
 
 .Card-Cont
 {
-    transition:0.3s;
+    transition:0.4s;
     margin:4rem 0.5rem;
     width: 20rem;
 }
 
 .Card-Cont:hover
 {
-    box-shadow: 0 0 15px 0.1px rgba(255,0,0,0.5);
+    box-shadow: 0 0 25px 0.1px var(--main-theme-bg-alt-col);
     transform:scale(1.02);
 }
 
-.Card-Cont .Member-Photo
+.Card-Cont .Mem-Photo
 {
     width:100%;
     height: 28rem;
-    margin-bottom:0.5rem;
-    border-radius: 5px;
     object-fit:cover;
 }
 
-.Card-Cont .Member-Depart
+.Card-Cont .Mem-Pos
 {
     font-family: 'barlow';
     font-size:1.8rem;
+}
+
+.Card-Cont .text
+{
+    font-family: 'Barlow', sans-serif;
 }
 
 .Card-Cont .text:nth-child(2)
 {
     font-size:1.5rem;
     font-weight:bolder;
-}
-
-.Card-Cont .text
-{
-    font-family: 'Barlow', sans-serif;
 }
 
 .Card-Cont .Social-Icon

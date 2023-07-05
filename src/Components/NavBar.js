@@ -2,39 +2,36 @@ import "../uni.css";
 import "./NavBar.css";
 import logo from "../Images/logo.png";
 import { NavLink } from "react-router-dom";
+import { MenuItems } from "../Data/MenuItems";
 
-const navItemList=["Home","Teams","Partnership","Our Projects","Resources","Contact Us"];
-
-function NavBar(props)
+function NavBar()
 {
 	return(
-		<nav className="NavBar">
-			<NavItems />
-		</nav>
+		<NavItems />
 	)
 }
 
 function NavItems()
 {
 	return (
-		<ul className="Nav-Items flex-r-sb-c">
+		<nav className="Nav-Items flex-r-sb-c">
 			<div className="Logo-Cont"><NavLink to="/Home"><img alt="logo" src={logo} /></NavLink></div>
-			<div className="flex-r-se-c Menu-Items">
+			<ul className="flex-r-se-c Menu-Items">
 			{
-				navItemList.map((iName)=>
+				MenuItems.map(({item, url})=>
 				{
-					return <NavItem key={iName} itemName={iName}/>
+					return <NavItem key={item} item={item} url={url}/>
 				})
 			}
-			</div>
-		</ul>
+			</ul>
+		</nav>
 	)
 }
 
-function NavItem(props)
+function NavItem({item, url})
 {
 	return (
-		<NavLink to={props.itemName} className="Nav-Item pse-ul-theme">{props.itemName}</NavLink>
+		<NavLink to={url} className="Nav-Item pse-ul-theme">{item}</NavLink>
 	)
 		
 }

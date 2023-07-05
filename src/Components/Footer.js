@@ -2,9 +2,9 @@ import "../uni.css";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import { FaFacebook,FaLinkedin,FaYoutube } from "react-icons/fa";
+import { _SocialLinks } from "../Data/SocialLinks";
+import { _AddressInfo } from "../Data/TeamInfo";
 
-const socialLinksTitle=["Facebook","Linkedin","Youtube"];
-const socialLinksURL=["https://www.facebook.com/teamshireto/","https://www.linkedin.com/company/team-shireto/","https://www.youtube.com/@teamshireto1629/featured"];
 const quickLinksTitle=["References","Events","Contact Us"];
 
 function Footer()
@@ -16,35 +16,20 @@ function Footer()
 				<QuickLinks />
 				<Socials />
 			</div>
-			<hr width="90%" color="red"/>
+			<br /><hr width="80%" color="red"/>
 			<CopyRight />
 		</footer>
 	)
 }
 
-function CopyRight()
+function AddressInfo()
 {
 	return (
-		<h4 className="gray-text" style={{margin:'2rem',letterSpacing:'2px'}}>Copyright © 2023 <b style={{color:'red'}}>TEAM SHIRETO</b> All Rights Reserved</h4>
-	)
-}
-
-function Socials()
-{
-	return (
-		<ul className="Footer-Socials flex-c-se-c">
-			<h2>Follow us on</h2>
-			{socialLinksTitle.map((link,ind)=>{
-				return <SocialIcon key={ind} link={link} ind={ind}/>
-			})}
-		</ul>
-	)
-}
-
-function SocialIcon({link,ind})
-{
-	return (
-		<Link key={link} to={socialLinksURL[ind]} target="_blank" className="item flex-r-se-c">{ind==0?<FaFacebook />:ind==1?<FaLinkedin />:<FaYoutube />}<span style={{margin:'0 1rem'}}>{link}</span></Link>
+		<div className="flex-c-se-c Add-Info">
+			<h2 className="pCase">{_AddressInfo.title}</h2>
+			<span className="text">{_AddressInfo.college}</span>
+			<span className="text">{_AddressInfo.location}</span>
+		</div>
 	)
 }
 
@@ -52,7 +37,7 @@ function QuickLinks()
 {
 	return (
 		<div className="flex-c-se-c">
-		<h2>Quick Links</h2>
+		<h2 className="pCase">Quick Links</h2>
 		<ul className="Links flex-r-se-c">
 			{quickLinksTitle.map((qLink)=>{
 				return <Link key={qLink} to={"/"+qLink} className="item">{qLink}</Link>
@@ -62,14 +47,29 @@ function QuickLinks()
 	)
 }
 
-function AddressInfo()
+function Socials()
 {
 	return (
-		<div className="flex-c-se-c Info">
-			<h2 className="sub-title">Our Location</h2>
-			<span className="text">IOE Thapathali Campus</span>
-			<span className="text">Kathmandu, Nepal</span>
-		</div>
+		<ul className="Footer-Socials flex-c-se-c">
+			<h2 className="pCase">Follow us on</h2>
+			{_SocialLinks.map(({media,url})=>{
+				return <SocialIcon key={media} media={media} url={url} />
+			})}
+		</ul>
+	)
+}
+
+function SocialIcon({media, url})
+{
+	return (
+		<Link to={url} target="_blank" className="item flex-r-se-c">{media==="Facebook"?<FaFacebook />:media==="Linkedin"?<FaLinkedin />:<FaYoutube />}<span style={{margin:'0 1rem'}}>{media}</span></Link>
+	)
+}
+
+function CopyRight()
+{
+	return (
+		<h4 className="gray-text" style={{margin:'2rem',letterSpacing:'2px'}}>Copyright © 2023 <b style={{color:'red'}}>TEAM SHIRETO</b> All Rights Reserved</h4>
 	)
 }
 

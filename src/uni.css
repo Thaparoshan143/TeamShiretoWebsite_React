@@ -163,3 +163,8 @@ a{text-decoration: none;background-color: transparent;color:var(--main-theme-tex
 {
     color:gray;
 }
+
+.pCase::first-letter
+{
+    font-size: 1.8em;
+}

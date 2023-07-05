@@ -1,18 +1,17 @@
 import React from 'react';
 import "./Home.css";
 import GroupPhoto from "../Images/GroupPhoto.jpeg";
-
-const teamDesc=["We are a dynamic student-led group of motorsport enthusiasts from various disciplines within the Thapathali Campus. We aim to conceptualise, fabricate, and compete in Formula International events with Nepal’s first Formula E car. Our primary objective is to establish ourselves as a prominent competitor in the global motorsport scene while concurrently promoting and nurturing the motorsport culture in Nepal."]
+import { _TeamInfo } from '../Data/TeamInfo';
 
 function Home() {
   return (
     <div className="page Home-Page flex-c-se-c">
         <div className="Home-Gallary-Cont">
-            <img src={GroupPhoto} alt="Group Photo"/>
+            <img src={GroupPhoto} alt="Team Member Photo"/>
         </div>
-        <h1 className="page-title">Team Shireto</h1>
-        <h3 className="sub-title">Pushing Limits, CHASING VICTORY</h3>
-        <p className="Desc-Text">{teamDesc}</p>
+        <h1 className="page-title">{_TeamInfo.name}</h1>
+        <h3 className="sub-title pCase">{_TeamInfo.theme}</h3>
+        <p className="Desc-Text">{_TeamInfo.description}</p>
     </div>
   )
 }

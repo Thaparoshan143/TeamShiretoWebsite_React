@@ -5,30 +5,22 @@
 {
     background-color: var(--main-theme-bg-col);
     color:white;
-    margin:5rem;
+    margin:4rem;
     padding:2rem 4rem;
-    border-radius:1rem;
 }
 
 .About-Us .page-title
 {
     font-size:4rem;
-    text-transform: capitalize;
 }
 
 .About-Us .About-Text
 {
     margin:2rem 0;
-    font-size:1.5rem;
+    font-size:1.4rem;
     line-height: 2.5rem;
-    font-weight: lighter;
+    font-weight: light;
     text-align:justify;
-}
-
-
-.Contact, .Contact-People
-{
-    width: 100%;
 }
 
 .Contact h2 
@@ -38,24 +30,21 @@
 
 .Contact .Contact-Text
 {
-    font-weight: bolder;
     font-size:1.7rem;
-}
-
-.Contact-People .Card-Cont
-{
-    width: 35%;
 }
 
 .Socials .btn
 {
     font-size:2.1rem;
+    color:var(--main-white);
+    background-color: var(--main-theme-bg-alt-col);
 }
 
 .Socials .btn:hover
 {
-    color:var(--main-white);
+    transform:translateY(-6px);
     background-color: var(--main-theme-bg-col);
+    box-shadow:0 5px 10px 1px rgba(50,50,50,0.8);
 }
 
 @media screen and (max-width:800px) {
@@ -63,36 +52,34 @@
     {
         font-size:2.5rem;
     }
+    
     .Contact-Text .gray-text
     {
         font-size: 1.3rem;
     }
+
     .Socials
     {
         width: 100%;
         flex-direction: column;
     }
+
     .Socials .btn
     {
         font-size: 1rem;
     }
-    .Contact-People
-    {
-        flex-direction: column;
-    }
-    .Contact-People .Card-Cont
-    {
-        width: 80%;
-    }
+
     .About-Us
     {
         padding:1.2rem;
         margin:5rem 1rem;
     }
+
     .About-Us .page-title
     {
         font-size: 2rem;
     }
+
     .About-Us .About-Text
     {
         font-size: 1.1rem;

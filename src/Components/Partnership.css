@@ -1,75 +1,69 @@
-.Dark .Contribute{background-color: var(--main-black);}
-.Light .Contribute{background-color: var(--main-white);}
+.Dark .Partnership{background-color: var(--main-black);}
+.Light .Partnership{background-color: var(--main-white);}
 
 .Light .Supp-Desc{color:var(--main-black);}
 .Dark .Supp-Desc{color:var(--main-white);}
-
-.Contribute .sub-title
-{
-    margin:3.2rem 0 0.2rem 0;
-}
 
 .Support-List, .Why-Us-List
 {
     background-color: rgba(125,125,125,0.25);
     margin:2rem 0;
     width: 90%;
-    padding:4rem 1rem;
-    font-size:1.2rem;
+    padding:2rem 1rem;
     text-align: left;
 }
 
-.Supp-Item, .WhyUs-Item
+.Supp-Item, .Why-Us-Item
 {
-    width: 90%;
-    margin:0.8rem;
+    width: 100%;
+    margin:0.5rem 0rem;
     border-bottom:2px solid red;
     padding:1rem;
 }
 
 .Supp-Title-Cont
 {
-    font-size:1.5rem;
+    font-size:1.2rem;
     font-weight:bolder;
 }
 
 .Supp-Desc
 {
-    font-size: 1.4rem;
-    font-weight:lighter;
     padding:1rem 0;
-    text-align: justify;
 }
 
 .Pre-Spon-Cont, .Feat-Cont
 {
     flex-wrap:wrap;
     width: 80%;
-    padding: 2rem;
     background-color:white;
     margin:2rem 0;
 }
 
-.Contribute-Img
+.Partnership-Img
 {
     width:12rem;
-    margin:2.5rem;
+    margin:2rem;
+    transition:0.5s;
+}
+
+.Partnership-Img:hover
+{
+    transform:scale(1.2);
 }
 
 @media screen and (max-width:800px) {
-    .Contribute-Img
+    .Partnership-Img
     {
         width:8rem;
-        margin:1rem;
     }
     .Pre-Spon-Cont, .Feat-Cont
     {
-        width: 95%;
+        width: 100%;
     }
 
     .Support-List, .Why-Us-List
     {
-        font-size: 1rem;
+        width: 100%;
     }
-
 }

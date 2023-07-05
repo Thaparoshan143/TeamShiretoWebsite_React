@@ -4,47 +4,47 @@
 .Home-Page
 {
     position: relative;
+    z-index: -2;
 }
 
 .Home-Gallary-Cont
 {
     position: absolute;
-    left:0;
+    left:0rem;
     top:8rem;
-    background-color: rgba(0,0,0,1);
+    background: #000;
+    z-index: -1;
 }
 
 .Home-Page .page-title
 {
     font-size: 6em;
-    margin-top:8rem;
-    z-index: 1;
+    margin-top:7rem;
+    letter-spacing: 0.7rem;
 }
 
 .Home-Page .sub-title
 {
-    z-index: 1;
     margin-top:2rem;
+    color:white;
 }
+
+
 
 .Desc-Text
 {
     font-size:1.4rem;
-    text-align: center;
-    padding:1rem;
-    line-height:1.7rem;
+    padding:0.8rem;
     color:var(--main-alt-black);
     margin-bottom:2rem;
-    z-index: 1;
     width: 90%;
-    text-align: center;
     background-color: rgba(220, 220, 220, 0.8);
 }
 
 .Home-Gallary-Cont img
 {
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 @media screen and (max-width:800px) {

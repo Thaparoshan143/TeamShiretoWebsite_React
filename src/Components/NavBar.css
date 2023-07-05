@@ -1,12 +1,7 @@
-.Light .NavBar{background-color: var(--main-alt-white);}
-.Dark .NavBar{background-color: var(--main-alt-black);}
+.Light .Nav-Items{background-color: var(--main-alt-white);}
+.Dark .Nav-Items{background-color: var(--main-alt-black);}
 
 nav
-{
-    position: relative;
-    /* display: none; */
-}
-.NavBar
 {
     z-index:100;
     width: 100%;
@@ -14,24 +9,20 @@ nav
 
 .Logo-Cont img
 {
-    margin:2rem 0;
-    width:100%;
     max-width: 28rem;
     transition:0.5s;
 }
 
 .Logo-Cont img:hover
 {
-    transform:scale(0.95);
     transform:rotate(180deg);
 }
 
 .Nav-Item
 {
-    font-size: 1.2rem;
     color:var(--main-theme-text-alt-col);
     padding:1.2rem 0.3rem;
-    margin:0.6rem 0.1rem;
+    margin:1rem 0;
     cursor:pointer;
     font-weight: bold;
     transition:color,transform 0.4s;
@@ -69,31 +60,26 @@ nav
     nav
     {
         position:fixed;
-        display: block;
-    }
-    .NavBar
-    {
-        height: fit-content;
     }
 
     .Logo-Cont img
     {
-        margin:0rem;
-        width:2.8rem;
+        width:3.5rem;
     }
 
     .Menu-Items,.Nav-Items{
         flex-direction: row;
     }
+
     .Menu-Items
     {
-        width: 70%;
+        width: 65%;
         margin-right: 3rem;
     }
+    
     .Nav-Item
     {
-        font-size: 1rem;
-        margin: 0 0.3rem;
+        margin:0rem 0.1rem;
         width: fit-content;
     }
 }

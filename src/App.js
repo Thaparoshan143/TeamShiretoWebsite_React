@@ -6,7 +6,7 @@ import Teams from "./Components/Teams";
 import Resources from './Components/Resources';
 import Gallary from './Components/Gallary';
 import OurProjects from "./Components/OurProjects";
-import Contribute from "./Components/Contribute";
+import Partnership from './Components/Partnership';
 import ContactUs from "./Components/ContactUs";
 import References from "./Components/References";
 import Events from "./Components/Events";
@@ -35,9 +35,9 @@ function App() {
 				<Route path="/Teams" element={<Teams />}/>
 				<Route path="/Resources" element={<Resources />} />
 				<Route path="/Gallary" element={<Gallary />} />
-				<Route path="/Our Projects" element={<OurProjects />} />
-				<Route path="/Partnership" element={<Contribute />} />
-				<Route path="/Contact Us" element={<ContactUs />} />
+				<Route path="/OurProjects" element={<OurProjects />} />
+				<Route path="/Partnership" element={<Partnership />} />
+				<Route path="/ContactUs" element={<ContactUs />} />
 				<Route path="/References" element={<References />} />
 				<Route path="/Events" element={<Events />} />
 			</Routes>
