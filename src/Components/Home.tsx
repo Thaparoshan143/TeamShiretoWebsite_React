@@ -1,11 +1,14 @@
-import "../uni.css"
-import "./Home.css"
+import React from "react"
 
-function Home()
+const Home : React.FC = () =>
 {
-	return(
-		<div className="Home">Home</div>
+	return (
+		<>
+		<div className="h-[100vh] w-[100vw] flex flex-col justify-evenly items-center">
+			<h1>I am in</h1>
+		</div>
+		</>
 	)
 }
 
-export default Home
+export default Home;
