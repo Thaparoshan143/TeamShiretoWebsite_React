@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { _NavItems } from '../assets/data/data';
+import { _NavItems } from '../assets/data/Links';
 import { Link, NavLink } from 'react-router-dom';
 
 interface INavItem
@@ -15,7 +15,7 @@ const Navbar : React.FC = () =>
     useEffect(()=>
     {
         const handleScroll = (event : any) => {
-            if(window.scrollY < 10 && scrollActive===true)
+            if(window.scrollY < 10)
             {
                 setScrollActive(false);
             }
@@ -36,7 +36,7 @@ const Navbar : React.FC = () =>
     const logoPath = require("../assets/images/logo.png");
 
     return (
-        <nav className={"flex flex-row justify-between items-center max-w-[100vw] w-[100vw] fixed " + (scrollActive?"backdrop-blur-xl bg-[#333]":"bg-[#000]")}>
+        <nav className={"flex flex-row justify-between items-center max-w-[100vw] w-[100vw] fixed backdrop-blur-xl " + (scrollActive?"bg-[#333]":"bg-[#000]")}>
 			<div className="w-[3rem] mx-4 hover:rotate-180 transition duration-300"><NavLink to="/Home"><img alt="logo" src={logoPath} /></NavLink></div>
             <div className="w-[60vw] flex flex-row justify-evenly items-center">
                 {
@@ -53,7 +53,7 @@ const Navbar : React.FC = () =>
 const NavItem : React.FC<INavItem> = ({item , url} : INavItem)=>
 {
     return (
-        <Link to={url} className="p-4 mx-2 text-theme-alt hover:text-theme font-extrabold hover:scale-[105%] transition-all duration-300 decoration-2 hover:underline hover:underline-offset-4">{item}</Link>
+        <Link to={url} className="p-4 mx-2 hover:text-theme font-medium hover:scale-[105%] transition-all duration-200 decoration-2 hover:underline hover:underline-offset-8">{item}</Link>
     )
 }
 

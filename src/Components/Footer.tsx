@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoIosFlash, IoLogoFacebook, IoLogoLinkedin, IoLogoYoutube } from "react-icons/io";
-import { _QuickLinks, _SocialLinks, _AddressInfo } from '../assets/data/data';
+import { _QuickLinks, _SocialLinks, _AddressInfo } from '../assets/data/Links';
 import { Link } from 'react-router-dom';
 
 interface IFooterQuickLink
@@ -47,10 +47,9 @@ const SocialLinks : React.FC = () =>
     )
 }
 
-const Social : React.FC<IFooterSocialLink> = ({media, url}) =>
+export const Social : React.FC<IFooterSocialLink> = ({media, url}) =>
 {
     return (
-        // <Link to={url} className="mx-4 p-4">{media}</Link>
 		<Link to={url} target="_blank" className="mx-4 hover:scale-[125%] transition-all duration-200">{media==="Facebook"?<IoLogoFacebook className="text-3xl hover:text-[#1877F2]"/>:media==="Linkedin"?<IoLogoLinkedin className="text-3xl hover:text-[#0077b5]"/>:<IoLogoYoutube className="text-3xl hover:text-[#ff0000]"/>}</Link>
     )
 }
@@ -90,7 +89,7 @@ const LinkItem : React.FC<IFooterQuickLink> = ({item, url} : IFooterQuickLink) =
     }
 
     return (
-        <Link to={url} className="hover:text-theme p-2 block" onMouseEnter={()=>MouseState(true)} onMouseLeave={()=>MouseState(false)}><IoIosFlash className={"text-theme text-2xl inline-block mx-2 transition-all duration-200 " + (isHover?"rotate-90":"rotate-0")} />{item}</Link>
+        <Link to={url} className="hover:text-theme p-2 block" onMouseEnter={()=>MouseState(true)} onMouseLeave={()=>MouseState(false)}><IoIosFlash className={"text-2xl inline-block mx-2 transition-all duration-200 " + (isHover?"rotate-90 text-theme" :"rotate-0 text-white")} />{item}</Link>
     )
 }
 
