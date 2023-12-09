@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { _SupportInfo, _WhyUsInfo } from '../assets/data/PartnershipInfo';
+import { _FeaturedInfo, _SponserInfo, _SupportInfo, _WhyUsInfo } from '../assets/data/PartnershipInfo';
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 interface ISupportList
@@ -16,6 +16,11 @@ const Partnership : React.FC = ()=>
             <SupportUs />
             <h1 className="text-4xl font-bold my-8">Why partner with Us</h1>
             <WhyUs />
+            <h1 className="text-4xl font-bold my-8">Our Previous Partners</h1>
+            <PreviousPartnerList />
+            <h1 className="text-4xl font-bold my-8">Featured in</h1>
+            <FeaturedList />
+            <PartnerWithUs />
         </div>
     )
 }
@@ -53,11 +58,64 @@ const SupportList : React.FC<ISupportList> = ({title, description} : ISupportLis
 const WhyUs : React.FC = () =>
 {
     return (
-        <div className="flex flex-col text-left bg-[#333] p-4 w-[80%] my-8">
+        <div className="flex flex-col text-left bg-[#333] p-4 w-[80%] my-8 rounded-xl">
             {_WhyUsInfo.map((item)=>
             {
                 return <li className="m-2">{item}<hr className="border-theme border-[0.1rem] border-dashed rounded-xl mt-3" /></li>
             })}
+        </div>
+    )
+}
+
+const PreviousPartnerList : React.FC = () =>
+{
+    function getSponserURL(name : string)
+    {
+        try{return require("../assets/images/spon-feat/Spon/" + name + ".jpg");}
+        catch{return null}
+    }
+
+    return (
+        <div className="bg-white rounded-xl flex flex-row justify-evenly items-center p-4 m-4 w-inherit">
+            {
+                _SponserInfo.map((sponser)=>
+                    {
+                        return <img src={getSponserURL(sponser)} className="h-[6rem] min-w-[6rem] m-6 hover:scale-[110%] transition duration-300" />
+                    })
+            }
+        </div>
+    )
+}
+
+const FeaturedList : React.FC = () => 
+{
+    function getFeaturedURL(name : string)
+    {
+        try{return require("../assets/images/spon-feat/Feat/" + name + ".jpg");}
+        catch{return null}
+    }
+
+    return (
+        <div className="bg-white rounded-xl flex flex-row justify-evenly items-center p-4 m-4 w-inherit">
+            {
+                _FeaturedInfo.map((feat)=>
+                {
+                    return <img src={getFeaturedURL(feat)} className="h-[6rem] min-w-[6rem] m-6 hover:scale-[110%] transition duration-300" />
+                })
+            }    
+        </div>
+    )
+}
+
+const PartnerWithUs : React.FC = () =>
+{
+    return (
+        <div className="bg-theme w-[100%] min-h-[20rem] my-[5rem] flex flex-col justify-evenly items-center">
+            <h1 className="text-6xl text-[#333] font-extrabold uppercase">Do you want to become a partner?</h1>
+            <div className="flex flex-row w-[100%] justify-evenly">
+                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:bg-theme">Download Proposal</button>
+                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:bg-theme">Become a Sponser!</button>
+            </div>
         </div>
     )
 }
