@@ -49,7 +49,7 @@ const SupportList : React.FC<ISupportList> = ({title, description} : ISupportLis
                 <span className="text-2xl text-theme">{title}</span>
                 <a className="hover:text-theme" onClick={()=>setIsActive(!isActive)}>{!isActive?<FaPlus />:<FaMinus />}</a>
             </div>
-            <p className="my-2">{isActive?description:""}</p>
+            <p className={isActive?"my-2 scale-y-100 transition-all duration-[500ms] ease-in-out":"my-0 scale-y-0 transition-all delay-300"}>{isActive?description:""}</p>
             <hr className="border-theme border-[0.1rem] rounded-xl my-3" />
         </div>
     )
@@ -113,8 +113,8 @@ const PartnerWithUs : React.FC = () =>
         <div className="bg-theme w-[100%] min-h-[20rem] my-[5rem] flex flex-col justify-evenly items-center">
             <h1 className="text-6xl text-[#333] font-extrabold uppercase">Do you want to become a partner?</h1>
             <div className="flex flex-row w-[100%] justify-evenly">
-                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:bg-theme">Download Proposal</button>
-                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:bg-theme">Become a Sponser!</button>
+                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:text-theme hover:scale-[105%] transition-all duration-300">Download Proposal</button>
+                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:text-theme hover:scale-[105%] transition-all duration-300">Become a Sponser!</button>
             </div>
         </div>
     )
