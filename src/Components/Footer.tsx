@@ -35,7 +35,6 @@ const SocialLinks : React.FC = () =>
 {
     return (
         <div className="w-[100vw] flex flex-row justify-end pr-[5vw] items-center min-h-[4rem] bg-[#333]  text-white">
-        <span className="mx-[10vw] flex-1 font-bold text-xl tracking-widest">"Pushing Limit, Chasing Victory"</span>
         <span className="mx-[5vw]">Follow us on : </span>
         {
             _SocialLinks.map(({media, url})=>

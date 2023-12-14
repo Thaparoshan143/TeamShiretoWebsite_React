@@ -1,6 +1,6 @@
 export const _TeamInfo = {
     name : "Team Shireto",
-    theme : 'Pushing Limits, Chasing Victory',
+    theme : '"Pushing Limits, Chasing Victory"',
     description : "We are a dynamic student-led group of motorsport enthusiasts from various disciplines within the Thapathali Campus. We aim to conceptualise, fabricate, and compete in Formula International events with Nepal’s first Formula E car. Our primary objective is to establish ourselves as a prominent competitor in the global motorsport scene while concurrently promoting and nurturing the motorsport culture in Nepal.",
 }
 
