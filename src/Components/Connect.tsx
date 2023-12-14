@@ -5,7 +5,7 @@ import { _AboutUs } from '../assets/data/TeamInfo';
 const Connect : React.FC = ()=>
 {
     return (
-        <div className="min-h-[100vh] flex flex-col justify-evenly items-center py-24">
+        <div className="min-h-[100vh] flex flex-col justify-evenly items-center py-24 ">
             <JoinUs />
             <AboutUs />
             <Contact />
@@ -16,13 +16,15 @@ const Connect : React.FC = ()=>
 const JoinUs : React.FC = ()=>
 {
     return (
-        <div className="w-[60%] flex flex-col justify-evenly items-center text-justify">
-            <h1 className="text-6xl text-theme my-6">Join Our Team</h1>
-            <p className="text-2xl m-4">{_JoinUsQuote.phraseOne}</p>
-            <p className="text-2xl m-4 font-light">{_JoinUsQuote.phraseTwo}</p>
-            <p className="text-2xl m-4">{_JoinUsQuote.phraseThree}</p>
-            <a href="#" className="text-5xl my-12 text-theme font-extrabold border-2 border-theme hover:text-white hover:bg-theme shadow-sm px-24 p-6 transition-all duration-300">Apply Now !</a>
-            <hr className="border-theme my-[5rem] w-[100%] border-2 rounded-xl" />
+        <div className="w-[60%] min-h-[100vh] flex flex-col justify-evenly items-center text-justify">
+            <h1 className="text-6xl text-theme uppercase font-bold tracking-widest">Join Our Team</h1>
+            <div className="flex flex-col ">
+                <p className="text-xl m-4">{_JoinUsQuote.phraseOne}</p>
+                <p className="text-md m-4 font-light">{_JoinUsQuote.phraseTwo}</p>
+                <p className="text-xl m-4">{_JoinUsQuote.phraseThree}</p>
+            </div>
+            <a href="#" className="text-5xl text-theme font-extrabold border-2 border-theme hover:text-white hover:bg-theme shadow-sm px-24 p-6 transition-all duration-300">Apply Now !</a>
+            <hr className="border-theme mb-[5rem] w-[100%] border-2 rounded-xl" />
         </div>
     )
 }
@@ -31,23 +33,26 @@ const AboutUs : React.FC = ()=>
 {
     const logoPath = require("../assets/images/logo1.png");
     return (
-        <div className=" p-8 w-[80%] flex flex-col justify-evenly items-center rounded-xl">
-            <h1 className="text-6xl my-6 font-bold uppercase text-theme">About Us</h1>
-            <img className="w-[30%]" src={logoPath}></img>
-            <p className="font-light text-2xl text-justify my-8 p-6 bg-theme-alth">{_AboutUs.info}</p>
-            <hr className="border-theme my-[5rem] w-[100%] border-2 border-dashed rounded-xl" />
+        <div className="p-8 w-[100%] min-h-[80vh] flex flex-col justify-evenly items-center bg-theme">
+            <h1 className="text-6xl my-6 font-bold uppercase tracking-widest">About Us</h1>
+            <img className="w-[20%]" src={logoPath}></img>
+            <p className="font-light w-[70%] text-xl text-justify my-8 p-6">{_AboutUs.info}</p>
         </div>
     )
 }
 
 const Contact : React.FC = ()=>
 {
+    const inputFieldStyle = "flex flex-row justify-between items-center";
+    const inputFieldStyleIn = "border-b-transparent border-b-2 focus:border-theme outline-none bg-transparent w-[70%] px-4 text-theme text-md font-medium ";
     return (
-        <form className="flex flex-col w-[50%] justify-evenly items-center min-h-[35rem]">
-            <h1 className="text-6xl font-bold mb-12">Contact Us</h1>
-            <div className="flex flex-row justify-between items-center w-[100%]"><label className="text-2xl font-bold">Name : </label><input type="text" placeholder="Enter your name here.." className="border-b-transparent border-b-2 focus:border-theme outline-none bg-transparent w-[70%] h-[4rem] p-4 text-theme text-2xl"/></div>
-            <div className="flex flex-row justify-between items-center w-[100%]"><label className="text-2xl font-bold">Email : </label><input type="email" placeholder="Enter your email here.." className="border-b-transparent border-b-2 focus:border-theme outline-none bg-transparent w-[70%] h-[4rem] p-4 text-theme text-2xl"/></div>
-            <div className="flex flex-row justify-between items-center w-[100%]"><label className="text-2xl font-bold">Message : </label><input type="text" placeholder="Enter your message here.." className="border-b-transparent border-b-2 focus:border-theme outline-none bg-transparent w-[70%] h-[10rem] p-4 text-theme text-2xl"/></div>
+        <form className="flex flex-col w-[100%] pt-[10rem] min-h-[100vh] justify-evenly items-center ">
+            <h1 className="text-6xl font-bold m-4 text-theme tracking-widest uppercase">Contact Us</h1>
+            <div className="flex flex-col w-[50%] bg-[#fff2] p-8 px-16 text-xl font-bold">
+                <div className={inputFieldStyle}><label>Name : </label><input type="text" placeholder="Enter your name here.." className={inputFieldStyleIn + "h-[4rem]"} /></div>
+                <div className={inputFieldStyle}><label>Email : </label><input type="email" placeholder="Enter your email here.." className={inputFieldStyleIn + "h-[4rem]"} /></div>
+                <div className={inputFieldStyle}><label>Message : </label><input type="text" placeholder="Enter your message here.." className={inputFieldStyleIn + "h-[10rem]"}/></div>
+            </div>
             <button className="bg-theme text-bold text-xl px-4 p-2 rounded-md my-12 hover:scale-[105%]">Get In Touch</button>
         </form>
     )

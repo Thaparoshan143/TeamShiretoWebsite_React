@@ -14,9 +14,11 @@ const Partnership : React.FC = ()=>
         <div className="min-h-[100vh] flex flex-col justify-evenly items-center pt-[8rem]">
             <SupportUs />
             <WhyUs />
-            <PreviousPartnerList />
-            <FeaturedList />
-            <PartnerWithUs />
+            <div className="bg-theme w-[100%] flex flex-col items-center justify-evenly">
+                <PreviousPartnerList />
+                <FeaturedList />
+            </div>
+                <PartnerWithUs />
         </div>
     )
 }
@@ -24,30 +26,61 @@ const Partnership : React.FC = ()=>
 const SupportUs : React.FC = ()=>
 {
     return (
-        <div className="w-[80%] flex flex-col justify-evenly items-center p-2 rounded-xl my-[2rem]">
-            <h1 className="text-4xl font-bold text-theme my-8">How you can Support us</h1>
-            {
-                _SupportInfo.map(({title, description})=>
+        <div className="w-[100%] min-h-[100vh] flex flex-col justify-evenly items-center p-2">
+            <h1 className="text-5xl font-bold uppercase">How you can Support us</h1>
+            <div className="flex flex-row w-[90%] justify-evenly items-center mb-[5rem]">
                 {
-                    return <SupportList title={title} description={description} />
-                })
-            }
+                    _SupportInfo.map(({title, description})=>
+                    {
+                        return <SupportList title={title} description={description} />
+                    })
+                }
+            </div>
         </div>
     )
 }
+
+// const SupportUs : React.FC = ()=>
+// {
+//     return (
+//         <div className="w-[100%] min-h-[100vh] flex flex-col justify-evenly items-center p-2 rounded-xl ">
+//             <h1 className="text-5xl font-bold text-theme uppercase">How you can Support us</h1>
+//             <div className="flex flex-col w-[70%] justify-evenly items-center">
+//                 {
+//                     _SupportInfo.map(({title, description})=>
+//                     {
+//                         return <SupportList title={title} description={description} />
+//                     })
+//                 }
+//             </div>
+//         </div>
+//     )
+// }
+
+// const SupportList : React.FC<ISupportList> = ({title, description} : ISupportList)=>
+// {
+//     const [isActive, setIsActive] = useState<boolean>(false);
+
+//     return (
+//         <div className={"w-[100%] px-4 my-2 transition-all duration-300 " + (isActive?"" : "")}>
+//             <div className={"flex flex-row items-center justify-between"}>
+//                 <span className="text-2xl cursor-pointer" onClick={()=>setIsActive(!isActive)}>{title}</span>
+//                 <a className="hover:text-theme" onClick={()=>setIsActive(!isActive)}>{!isActive?<FaPlus />:<FaMinus />}</a>
+//             </div>
+//             <p className={"my-2 text-[#fff7] transition-all text-justify duration-300 delay-200 " + (isActive?"scale-y-[100%]":"scale-y-[0%]")}>{isActive?description:""}</p>
+//             <hr className="border-theme-alt border-[0.1rem] rounded-xl my-3" />
+//         </div>
+//     )
+// }
 
 const SupportList : React.FC<ISupportList> = ({title, description} : ISupportList)=>
 {
     const [isActive, setIsActive] = useState<boolean>(false);
 
     return (
-        <div className={"px-4 my-2 transition-all duration-300 w-[90%]" + (isActive?"" : "")}>
-            <div className={"flex flex-row items-center justify-between"}>
-                <span className="text-2xl cursor-pointer" onClick={()=>setIsActive(!isActive)}>{title}</span>
-                <a className="hover:text-theme" onClick={()=>setIsActive(!isActive)}>{!isActive?<FaPlus />:<FaMinus />}</a>
-            </div>
-            <p className={"my-2 text-[#fff7] transition-all text-justify duration-300 delay-200 " + (isActive?"scale-y-[100%]":"scale-y-[0%]")}>{isActive?description:""}</p>
-            <hr className="border-theme-alt border-[0.1rem] rounded-xl my-3" />
+        <div className={"flex flex-col w-[25rem] min-h-[30rem] justify-evenly hover:translate-y-[-1rem] hover:scale-[105%] hover:bg-theme items-center bg-[#fff2] mx-4 text-center p-6 transition-all duration-300"} onMouseOver={()=>setIsActive(true)} onMouseLeave={()=>setIsActive(false)} >
+            <span className="text-2xl font-bold transition-all duration-300">{title}</span>
+            {isActive && <p className={"my-2 font-light transition-all text-justify duration-300 delay-200 h-fit "}>{description}</p>  }         
         </div>
     )
 }
@@ -57,13 +90,13 @@ const WhyUs : React.FC = () =>
     const whyUsPath = require("../assets/images/whyus.png");
 
     return (
-        <div className="flex flex-row w-[90%] my-8 rounded-xl justify-around items-center">
-            <img className="w-[50%]" src={whyUsPath}></img>
-            <div className="flex h-[60%] flex-col bg-[#3333] rounded-xl justify-evenly p-4">
-                <h1 className="text-4xl text-center text-theme font-bold my-8">Why partner with Us</h1>
+        <div className="flex flex-row w-[100%] my-8 min-h-[100vh] rounded-xl justify-around items-center">
+            <img className="w-[45%]" src={whyUsPath}></img>
+            <div className="flex h-[65%] flex-col bg-[#3333] rounded-xl justify-evenly p-2">
+                <h1 className="text-4xl text-center text-theme font-bold my-8 uppercase">Why partner with Us</h1>
                 {_WhyUsInfo.map((item)=>
                 {
-                    return <li className="m-2 text-justify">{item}</li>
+                    return <li className="m-2 text-justify text-sm font-light">{item}</li>
                 })}
             </div>
         </div>
@@ -80,12 +113,12 @@ const PreviousPartnerList : React.FC = () =>
 
     return (
         <>
-        <h1 className="text-4xl font-bold my-8 text-theme uppercase">Our Previous Partners</h1>
-        <div className="bg-white rounded-xl flex flex-row justify-evenly items-center p-4 m-4 w-inherit">
+        <h1 className="text-4xl font-bold my-8 uppercase">Our Previous Partners</h1>
+        <div className="bg-theme flex flex-row justify-evenly items-center p-4 m-4 w-inherit">
             {
                 _SponserInfo.map((sponser)=>
                     {
-                        return <img src={getSponserURL(sponser)} className="h-[6rem] min-w-[6rem] m-6 hover:scale-[110%] transition duration-300" />
+                        return <img src={getSponserURL(sponser)} className="bg-white rounded-xl p-4 h-[5rem] min-w-[5rem] m-6 hover:scale-[110%] transition duration-300" />
                     })
             }
         </div>
@@ -103,12 +136,12 @@ const FeaturedList : React.FC = () =>
 
     return (
         <>
-        <h1 className="text-4xl font-bold my-8 text-theme uppercase">Featured in</h1>
-        <div className="bg-white rounded-xl flex flex-row justify-evenly items-center p-4 m-4 w-inherit">
+        <h1 className="text-4xl font-bold my-8 uppercase">Featured in</h1>
+        <div className="flex flex-row justify-evenly items-center p-4 m-4 w-[80%] bg-theme">
             {
                 _FeaturedInfo.map((feat)=>
                 {
-                    return <img src={getFeaturedURL(feat)} className="h-[6rem] min-w-[6rem] m-6 hover:scale-[110%] transition duration-300" />
+                    return <img src={getFeaturedURL(feat)} className="p-4 rounded-xl bg-white h-[5rem] min-w-[5rem] m-2 hover:scale-[110%] transition duration-300" />
                 })
             }    
         </div>
@@ -119,11 +152,11 @@ const FeaturedList : React.FC = () =>
 const PartnerWithUs : React.FC = () =>
 {
     return (
-        <div className="bg-theme w-[100%] min-h-[20rem] my-[5rem] flex flex-col justify-evenly items-center">
-            <h1 className="text-6xl text-[#333] font-extrabold uppercase">Do you want to become a partner?</h1>
+        <div className=" w-[100%] min-h-[20rem] my-[5rem] flex flex-col justify-evenly items-center">
+            <h1 className="text-6xl text-theme font-extrabold uppercase">Do you want to become a partner?</h1>
             <div className="flex flex-row w-[100%] justify-evenly">
-                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:text-theme hover:scale-[105%] transition-all duration-300">Download Proposal</button>
-                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 border-2 border-[#333] hover:text-theme hover:scale-[105%] transition-all duration-300">Become a Sponser!</button>
+                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 hover:bg-theme hover:text-white text-white hover:scale-[105%] transition-all duration-300">Download Proposal</button>
+                <button className="bg-[#333] rounded-sm text-xl p-6 px-12 hover:bg-theme hover:text-white text-white hover:scale-[105%] transition-all duration-300">Become a Sponser!</button>
             </div>
         </div>
     )
