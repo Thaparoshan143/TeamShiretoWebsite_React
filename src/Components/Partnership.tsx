@@ -41,9 +41,9 @@ const SupportList : React.FC<ISupportList> = ({title, description} : ISupportLis
     const [isActive, setIsActive] = useState<boolean>(false);
 
     return (
-        <div className={"px-4 my-2 transition-all duration-300 " + (isActive?"w-[90%] " : "w-[60%]")}>
+        <div className={"px-4 my-2 transition-all duration-300 w-[90%]" + (isActive?"" : "")}>
             <div className={"flex flex-row items-center justify-between"}>
-                <span className="text-2xl">{title}</span>
+                <span className="text-2xl cursor-pointer" onClick={()=>setIsActive(!isActive)}>{title}</span>
                 <a className="hover:text-theme" onClick={()=>setIsActive(!isActive)}>{!isActive?<FaPlus />:<FaMinus />}</a>
             </div>
             <p className={"my-2 text-[#fff7] transition-all text-justify duration-300 delay-200 " + (isActive?"scale-y-[100%]":"scale-y-[0%]")}>{isActive?description:""}</p>
