@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { _FeaturedInfo, _SponserInfo, _SupportInfo, _WhyUsInfo } from '../assets/data/PartnershipInfo';
-import { FaMinus, FaPlus } from "react-icons/fa";
 
 interface ISupportList
 {
@@ -27,7 +26,7 @@ const SupportUs : React.FC = ()=>
 {
     return (
         <div className="w-[100%] min-h-[100vh] flex flex-col justify-evenly items-center p-2">
-            <h1 className="text-5xl font-bold uppercase">How you can Support us</h1>
+            <h1 className="text-5xl font-bold uppercase text-theme">How you can Support us</h1>
             <div className="flex flex-row w-[90%] justify-evenly items-center mb-[5rem]">
                 {
                     _SupportInfo.map(({title, description})=>
@@ -40,39 +39,6 @@ const SupportUs : React.FC = ()=>
     )
 }
 
-// const SupportUs : React.FC = ()=>
-// {
-//     return (
-//         <div className="w-[100%] min-h-[100vh] flex flex-col justify-evenly items-center p-2 rounded-xl ">
-//             <h1 className="text-5xl font-bold text-theme uppercase">How you can Support us</h1>
-//             <div className="flex flex-col w-[70%] justify-evenly items-center">
-//                 {
-//                     _SupportInfo.map(({title, description})=>
-//                     {
-//                         return <SupportList title={title} description={description} />
-//                     })
-//                 }
-//             </div>
-//         </div>
-//     )
-// }
-
-// const SupportList : React.FC<ISupportList> = ({title, description} : ISupportList)=>
-// {
-//     const [isActive, setIsActive] = useState<boolean>(false);
-
-//     return (
-//         <div className={"w-[100%] px-4 my-2 transition-all duration-300 " + (isActive?"" : "")}>
-//             <div className={"flex flex-row items-center justify-between"}>
-//                 <span className="text-2xl cursor-pointer" onClick={()=>setIsActive(!isActive)}>{title}</span>
-//                 <a className="hover:text-theme" onClick={()=>setIsActive(!isActive)}>{!isActive?<FaPlus />:<FaMinus />}</a>
-//             </div>
-//             <p className={"my-2 text-[#fff7] transition-all text-justify duration-300 delay-200 " + (isActive?"scale-y-[100%]":"scale-y-[0%]")}>{isActive?description:""}</p>
-//             <hr className="border-theme-alt border-[0.1rem] rounded-xl my-3" />
-//         </div>
-//     )
-// }
-
 const SupportList : React.FC<ISupportList> = ({title, description} : ISupportList)=>
 {
     const [isActive, setIsActive] = useState<boolean>(false);
@@ -80,7 +46,7 @@ const SupportList : React.FC<ISupportList> = ({title, description} : ISupportLis
     return (
         <div className={"flex flex-col w-[25rem] min-h-[30rem] justify-evenly hover:translate-y-[-1rem] hover:scale-[105%] hover:bg-theme items-center bg-[#fff2] mx-4 text-center p-6 transition-all duration-300"} onMouseOver={()=>setIsActive(true)} onMouseLeave={()=>setIsActive(false)} >
             <span className="text-2xl font-bold transition-all duration-300">{title}</span>
-            {isActive && <p className={"my-2 font-light transition-all text-justify duration-300 delay-200 h-fit "}>{description}</p>  }         
+            {isActive && <p className={"my-2 font-light transition-all text-justify duration-300 "}>{description}</p>  }         
         </div>
     )
 }
@@ -91,7 +57,7 @@ const WhyUs : React.FC = () =>
 
     return (
         <div className="flex flex-row w-[100%] my-8 min-h-[100vh] rounded-xl justify-around items-center">
-            <img className="w-[45%]" src={whyUsPath}></img>
+            <img className="w-[45%]" src={whyUsPath} alt="why-us-img"></img>
             <div className="flex h-[65%] flex-col bg-[#3333] rounded-xl justify-evenly p-2">
                 <h1 className="text-4xl text-center text-theme font-bold my-8 uppercase">Why partner with Us</h1>
                 {_WhyUsInfo.map((item)=>
@@ -118,7 +84,7 @@ const PreviousPartnerList : React.FC = () =>
             {
                 _SponserInfo.map((sponser)=>
                     {
-                        return <img src={getSponserURL(sponser)} className="bg-white rounded-xl p-4 h-[5rem] min-w-[5rem] m-6 hover:scale-[110%] transition duration-300" />
+                        return <img alt={sponser} src={getSponserURL(sponser)} className="bg-white rounded-xl p-4 h-[5rem] min-w-[5rem] m-6 hover:scale-[110%] transition duration-300" />
                     })
             }
         </div>
@@ -141,7 +107,7 @@ const FeaturedList : React.FC = () =>
             {
                 _FeaturedInfo.map((feat)=>
                 {
-                    return <img src={getFeaturedURL(feat)} className="p-4 rounded-xl bg-white h-[5rem] min-w-[5rem] m-2 hover:scale-[110%] transition duration-300" />
+                    return <img alt={feat} src={getFeaturedURL(feat)} className="p-4 rounded-xl bg-white h-[5rem] min-w-[5rem] m-2 hover:scale-[110%] transition duration-300" />
                 })
             }    
         </div>

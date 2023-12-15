@@ -35,7 +35,7 @@ const AboutUs : React.FC = ()=>
     return (
         <div className="p-8 w-[100%] min-h-[80vh] flex flex-col justify-evenly items-center bg-theme">
             <h1 className="text-6xl my-6 font-bold uppercase tracking-widest">About Us</h1>
-            <img className="w-[20%]" src={logoPath}></img>
+            <img className="w-[20%]" src={logoPath} alt="logo"></img>
             <p className="font-light w-[70%] text-xl text-justify my-8 p-6">{_AboutUs.info}</p>
         </div>
     )
@@ -46,7 +46,7 @@ const Contact : React.FC = ()=>
     const inputFieldStyle = "flex flex-row justify-between items-center";
     const inputFieldStyleIn = "border-b-transparent border-b-2 focus:border-theme outline-none bg-transparent w-[70%] px-4 text-theme text-md font-medium ";
     return (
-        <form className="flex flex-col w-[100%] pt-[10rem] min-h-[100vh] justify-evenly items-center ">
+        <form id="ContactUs" className="flex flex-col w-[100%] pt-[10rem] min-h-[100vh] justify-evenly items-center ">
             <h1 className="text-6xl font-bold m-4 text-theme tracking-widest uppercase">Contact Us</h1>
             <div className="flex flex-col w-[50%] bg-[#fff2] p-8 px-16 text-xl font-bold">
                 <div className={inputFieldStyle}><label>Name : </label><input type="text" placeholder="Enter your name here.." className={inputFieldStyleIn + "h-[4rem]"} /></div>

@@ -57,6 +57,6 @@ export const _QuickLinks = [
     },
     {
         item : "Contact Us",
-        url : "/ContactUs",
+        url : "/connect#ContactUs",
     }
 ]
