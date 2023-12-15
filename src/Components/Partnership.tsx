@@ -27,7 +27,7 @@ const SupportUs : React.FC = ()=>
     return (
         <div className="w-[100%] min-h-[100vh] flex flex-col justify-evenly items-center p-2">
             <h1 className="text-5xl font-bold uppercase text-theme">How you can Support us</h1>
-            <div className="flex flex-row w-[90%] justify-evenly items-center mb-[5rem]">
+            <div className="flex flex-row w-[90%] h-[30rem] justify-evenly items-center">
                 {
                     _SupportInfo.map(({title, description})=>
                     {
@@ -44,7 +44,7 @@ const SupportList : React.FC<ISupportList> = ({title, description} : ISupportLis
     const [isActive, setIsActive] = useState<boolean>(false);
 
     return (
-        <div className={"flex flex-col w-[25rem] min-h-[30rem] justify-evenly hover:translate-y-[-1rem] hover:scale-[105%] hover:bg-theme items-center bg-[#fff2] mx-4 text-center p-6 transition-all duration-300"} onMouseOver={()=>setIsActive(true)} onMouseLeave={()=>setIsActive(false)} >
+        <div className={"flex flex-col w-[25rem] h-[100%] justify-evenly hover:translate-y-[-1rem] hover:scale-[105%] hover:bg-theme items-center bg-[#3337] mx-4 text-center p-6 transition-all duration-300"} onMouseOver={()=>setIsActive(true)} onMouseLeave={()=>setIsActive(false)} >
             <span className="text-2xl font-bold transition-all duration-300">{title}</span>
             {isActive && <p className={"my-2 font-light transition-all text-justify duration-300 "}>{description}</p>  }         
         </div>
@@ -59,7 +59,7 @@ const WhyUs : React.FC = () =>
         <div className="flex flex-row w-[100%] my-8 min-h-[100vh] rounded-xl justify-around items-center">
             <img className="w-[45%]" src={whyUsPath} alt="why-us-img"></img>
             <div className="flex h-[65%] flex-col bg-[#3333] rounded-xl justify-evenly p-2">
-                <h1 className="text-4xl text-center text-theme font-bold my-8 uppercase">Why partner with Us</h1>
+                <h1 className="text-4xl text-center text-theme font-bold my-8 uppercase">partner with shireto</h1>
                 {_WhyUsInfo.map((item)=>
                 {
                     return <li className="m-2 text-justify text-sm font-light">{item}</li>
@@ -129,3 +129,4 @@ const PartnerWithUs : React.FC = () =>
 }
 
 export default Partnership;
+export { SupportList };
