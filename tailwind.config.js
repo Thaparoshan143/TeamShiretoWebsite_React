@@ -11,6 +11,7 @@ module.exports = {
       },
       fontSize : 
       {
+        '10xl' : "10rem",
         '12xl' : "20rem",
       },
       keyframes: {
