@@ -9,6 +9,10 @@ module.exports = {
         "theme-alt" : "#ff0000aa",
         "theme-alth" : "#ff000077",
       },
+      fontSize : 
+      {
+        '12xl' : "20rem",
+      },
       keyframes: {
         animatedgradient: {
           '0%': { backgroundPosition: '0% 50%' },
