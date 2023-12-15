@@ -267,7 +267,7 @@ export const _MemberInfo = [
     },
     {
         name : "Bikalpa Poudel",
-        position : "",
+        position : "Vehicle Dynamics",
         email : "poudelbikalpa21@gmail.com",
         socials : [
             {

@@ -48,7 +48,7 @@ const Contact : React.FC = ()=>
     return (
         <form id="ContactUs" className="flex flex-col w-[100%] pt-[10rem] min-h-[100vh] justify-evenly items-center ">
             <h1 className="text-6xl font-bold m-4 text-theme tracking-widest uppercase">Contact Us</h1>
-            <div className="flex flex-col w-[50%] bg-[#fff2] p-8 px-16 text-xl font-bold">
+            <div className="flex flex-col w-[50%] p-8 px-16 text-xl font-bold">
                 <div className={inputFieldStyle}><label>Name : </label><input type="text" placeholder="Enter your name here.." className={inputFieldStyleIn + "h-[4rem]"} /></div>
                 <div className={inputFieldStyle}><label>Email : </label><input type="email" placeholder="Enter your email here.." className={inputFieldStyleIn + "h-[4rem]"} /></div>
                 <div className={inputFieldStyle}><label>Message : </label><input type="text" placeholder="Enter your message here.." className={inputFieldStyleIn + "h-[10rem]"}/></div>

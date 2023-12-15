@@ -17,7 +17,7 @@ const Partnership : React.FC = ()=>
                 <PreviousPartnerList />
                 <FeaturedList />
             </div>
-                <PartnerWithUs />
+            <PartnerWithUs />
         </div>
     )
 }
@@ -119,7 +119,7 @@ const PartnerWithUs : React.FC = () =>
 {
     return (
         <div className=" w-[100%] min-h-[20rem] my-[5rem] flex flex-col justify-evenly items-center">
-            <h1 className="text-6xl text-theme font-extrabold uppercase">Do you want to become a partner?</h1>
+            <h1 className="text-6xl font-extrabold text-theme uppercase">Do you want to become a partner?</h1>
             <div className="flex flex-row w-[100%] justify-evenly">
                 <button className="bg-[#333] rounded-sm text-xl p-6 px-12 hover:bg-theme hover:text-white text-white hover:scale-[105%] transition-all duration-300">Download Proposal</button>
                 <button className="bg-[#333] rounded-sm text-xl p-6 px-12 hover:bg-theme hover:text-white text-white hover:scale-[105%] transition-all duration-300">Become a Sponser!</button>

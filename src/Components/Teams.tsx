@@ -7,7 +7,7 @@ const Teams : React.FC = () =>
 {
     return (
         <div className="min-h-[100vh] flex flex-col justify-evenly items-center">
-            <h1 className="mt-[8rem] font-bold text-2xl text-theme">Meet out Team Members</h1>
+            <h1 className="mt-[8rem] font-bold text-4xl text-theme uppercase">Meet out Team Members</h1>
             <div className="grid grid-cols-4 p-4 my-12">
                 {
                     _MemberInfo.map(({name, position, email, socials})=>

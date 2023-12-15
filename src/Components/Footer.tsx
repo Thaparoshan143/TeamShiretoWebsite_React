@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IoIosFlash, IoLogoFacebook, IoLogoLinkedin, IoLogoYoutube } from "react-icons/io";
+import { IoIosFlash, IoLogoFacebook, IoLogoLinkedin, IoLogoYoutube, IoLogoInstagram } from "react-icons/io";
 import { _QuickLinks, _SocialLinks, _AddressInfo } from '../assets/data/Links';
 import { Link } from 'react-router-dom';
 
@@ -18,12 +18,11 @@ interface IFooterSocialLink
 const Footer : React.FC = () =>
 {
     return (
-        <footer className="flex flex-col w-[100vw] justify-evenly items-center bg-[#333] text-white p-2">
+        <footer className="flex flex-col w-[100vw] justify-evenly items-center text-white p-4">
             <SocialLinks />
             <hr className="w-[80%] bg-theme border-theme border-2 rounded-xl m-4" />
             <div className="flex flex-row w-[100vw] justify-evenly items-center p-6">
                 <AddressInfo />
-                {/* <FeatureOn /> */}
                 <QuickLinks />
             </div>
             <Copyright />
@@ -34,8 +33,7 @@ const Footer : React.FC = () =>
 const SocialLinks : React.FC = () =>
 {
     return (
-        <div className="w-[100vw] flex flex-row justify-end pr-[5vw] items-center min-h-[4rem] bg-[#333]  text-white">
-        <span className="mx-[5vw]">Follow us on : </span>
+        <div className="w-[50%] px-[50%] flex flex-row justify-evenly items-center min-h-[4rem] text-white">
         {
             _SocialLinks.map(({media, url})=>
             {
@@ -49,7 +47,7 @@ const SocialLinks : React.FC = () =>
 export const Social : React.FC<IFooterSocialLink> = ({media, url}) =>
 {
     return (
-		<Link to={url} target="_blank" className="mx-4 hover:scale-[125%] transition-all duration-200">{media==="Facebook"?<IoLogoFacebook className="text-3xl hover:text-[#1877F2]"/>:media==="Linkedin"?<IoLogoLinkedin className="text-3xl hover:text-[#0077b5]"/>:<IoLogoYoutube className="text-3xl hover:text-[#ff0000]"/>}</Link>
+		<Link to={url} target="_blank" className="mx-4 text-5xl">{media==="Facebook"?<IoLogoFacebook className="hover:text-[#1877F2]"/>:media==="Linkedin"?<IoLogoLinkedin className="hover:text-[#0077b5]"/>:media==="Youtube"?<IoLogoYoutube className="hover:text-[#ff0000]"/>:media==="Instagram"?<IoLogoInstagram className="hover:text-[#F77737]"/>:""}</Link>
     )
 }
 

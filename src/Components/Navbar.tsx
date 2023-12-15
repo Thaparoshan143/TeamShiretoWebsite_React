@@ -33,11 +33,11 @@ const Navbar : React.FC = () =>
         };
     }, []);
 
-    const logoPath = require("../assets/images/logo.png");
+    const logoPath = require("../assets/images/shiretologo.png");
 
     return (
         <nav className={"flex flex-row justify-between items-center max-w-[100vw] w-[100vw] fixed z-10 backdrop-blur-xl " + (scrollActive?"bg-[#3337]":"bg-[#000]")}>
-			<div className="w-[3rem] mx-4 hover:rotate-180 transition duration-300"><NavLink to="/Home"><img alt="logo" src={logoPath} /></NavLink></div>
+			<div className="w-[10rem] mx-4"><NavLink to="/Home"><img alt="logo" src={logoPath} /></NavLink></div>
             <div className="w-[60vw] flex flex-row justify-evenly items-center">
                 {
                     _NavItems.map(({item, url})=>

@@ -31,13 +31,17 @@ export const _SocialLinks = [
         url : "https://www.facebook.com/teamshireto/",
     },
     {
+        media : "Instagram",
+        url : "https://www.instagram.com/teamshireto/",
+    },
+    {
         media : "Linkedin",
         url : "https://www.linkedin.com/company/team-shireto/",
     },
     {
         media : "Youtube",
         url : "https://www.youtube.com/@teamshireto1629/featured",
-    }
+    },
 ]
 
 export const _AddressInfo = {

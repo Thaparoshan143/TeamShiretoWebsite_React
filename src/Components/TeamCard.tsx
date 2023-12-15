@@ -24,18 +24,20 @@ const TeamCard : React.FC<IMemberInfo> = ({name, position, email, socials}: IMem
     const memPath = memImgExist();
 
     return (
-        <div className="m-8 hover:shadow-md hover:shadow-theme transition-all duration-100 min-h-[20rem] min-w-[15rem] rounded-xl text-center overflow-hidden">
-            <img src={memPath?memPath:"#"} loading="lazy" className="max-w-[100%] max-h-[70%] w-[100%] h-[70%] object-cover"/>
-            <h1 className="font-medium text-2xl my-2">{name}</h1>
-            <h2 className="font-bold text-theme">{position}</h2>
-            <a className="font-light text-sm my-2" href={`mailto:${email}`}>{email}</a>
-            <div className="flex flex-row my-4 w-[100%] justify-evenly items-center">
-                {
-                    socials ? socials.map(({media, url})=>
+        <div className="relative m-12  hover:scale-[105%] transition-all duration-300 min-h-[10rem] min-w-[15rem] text-center overflow-hidden">
+            <div className="max-h-[30rem] h-[30rem] max-w-[20rem] w-[20rem] overflow-hidden"><img alt="team-member" src={memPath} className="w-[100%] h-[100%] object-cover"/></div>
+            <div className="absolute z-10 opacity-0 hover:opacity-100 top-0 left-0 w-[100%] h-[100%] flex flex-col justify-evenly items-center p-4 bg-theme">
+                <span className="text-2xl">{name}</span>
+                <span className="text-3xl text-[#333] font-extrabold uppercase">{position}</span>
+                <a href={`mailto:${email}`} className="text-xl font-light">{email}</a>
+                <div className="flex flex-row justify-evenly items-center m-2">
                     {
-                        return <Social media={media} url={url} />
-                    }) : null
-                }
+                        socials.map(({media, url})=>
+                        {
+                            return <Social media={media} url={url} />
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
