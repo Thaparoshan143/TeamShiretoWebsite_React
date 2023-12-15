@@ -8,7 +8,7 @@ const OurProjects : React.FC = ()=>
     return (
         <div className="min-h-[100vh] flex flex-col justify-evenly items-center">
             <img alt="vehicle design" className="absolute -z-10 top-[10vh] left-0 opacity-30 w-[100%]" src={img1Path} />
-            <img alt="vehicle design" className="absolute bg-scroll top-[100vh] left-0 -z-10 opacity-30 w-[100%]" src={img2Path} />
+            <img alt="vehicle design" className="absolute bg-scroll top-[110vh] left-0 -z-10 opacity-30 w-[100%]" src={img2Path} />
             
             <div className="flex flex-col justify-evenly items-center w-[80%] h-[100vh]">
                 <h1 className="text-theme text-left min-h-[80%] w-[100%] text-10xl font-bold uppercase"><span className="text-4xl text-white">Project<br /></span>Formula<br /> Bharat</h1>
