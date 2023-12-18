@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { _FeaturedInfo, _SponserInfo, _SupportInfo, _WhyUsInfo } from '../assets/data/PartnershipInfo';
+import { _FeaturedInfo, _PromotionPlans, _SponserInfo, _SupportInfo, _WhyUsInfo } from '../assets/data/PartnershipInfo';
+import PlansCard from './PlansCard';
+import {IoIosFlash} from "react-icons/io";
 
 interface ISupportList
 {
@@ -12,6 +14,7 @@ const Partnership : React.FC = ()=>
     return (
         <div className="min-h-[100vh] flex flex-col justify-evenly items-center pt-[8rem]">
             <SupportUs />
+            <PromotionPlans />
             <WhyUs />
             <div className="bg-theme w-[100%] flex flex-col items-center justify-evenly">
                 <PreviousPartnerList />
@@ -39,6 +42,23 @@ const SupportUs : React.FC = ()=>
     )
 }
 
+const PromotionPlans : React.FC = ()=>
+{
+    return (
+        <div className="w-[100%] min-h-[100vh] flex flex-col justify-evenly items-center">
+        <h1 className="text-5xl font-bold text-theme uppercase my-12">Promotion Plans</h1>
+        <div className="flex w-[100%] justify-evenly items-center flex-wrap flex-col md:flex-row">
+            {
+                _PromotionPlans.map(({rank, value, benefits})=>
+                {
+                    return <PlansCard rank={rank} value={value} benefits={benefits} />
+                })
+            }
+        </div>
+    </div>
+    )
+}
+
 const SupportList : React.FC<ISupportList> = ({title, description} : ISupportList)=>
 {
     const [isActive, setIsActive] = useState<boolean>(false);
@@ -60,10 +80,12 @@ const WhyUs : React.FC = () =>
             <img className="w-[45%]" src={whyUsPath} alt="why-us-img"></img>
             <div className="flex h-[65%] flex-col bg-[#3333] rounded-xl justify-evenly p-2">
                 <h1 className="text-4xl text-center text-theme font-bold my-8 uppercase">partner with shireto</h1>
-                {_WhyUsInfo.map((item)=>
-                {
-                    return <li className="m-2 text-justify text-sm font-light">{item}</li>
-                })}
+                <ul className="flex flex-col justify-evenly items-center w-[100%]">
+                    {_WhyUsInfo.map((item)=>
+                    {
+                        return <li className="m-2 w-[100%] text-sm font-light"><IoIosFlash className="text-2xl mx-2 inline-block text-theme" />{item}</li>
+                    })}
+                </ul>
             </div>
         </div>
     )

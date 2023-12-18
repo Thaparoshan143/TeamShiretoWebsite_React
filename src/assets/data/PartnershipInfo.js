@@ -17,6 +17,63 @@ export const _SupportInfo = [
     }
 ]
 
+export const _PromotionPlans = [
+    {
+        rank : "Platinum",
+        value : "Above 15 L",
+        benefits : [
+            "Feature on Social Media",
+            "Branding on website",
+            "Branding on T-shirt",
+            "Promotional Video",
+            "Promotion through Events",
+            "Invitation to Team Events",
+            "Branding on Newsletter",
+            "Branding on Vehicle",
+            "Branding on Helmet",
+            "Invitation on Vehicle Launch",
+        ]
+    },
+    {
+        rank : "Gold",
+        value : "Above 10 L",
+        benefits : [
+            "Feature on Social Media",
+            "Branding on website",
+            "Branding on T-shirt",
+            "Promotional Video",
+            "Promotion through Events",
+            "Invitation to Team Events",
+            "Branding on Newsletter",
+            "Branding on Vehicle",
+        ]
+    },
+    {
+        rank : "Silver",
+        value : "Above 5 L",
+        benefits : [
+            "Feature on Social Media",
+            "Branding on website",
+            "Branding on T-shirt",
+            "Promotional Video",
+            "Promotion through Events",
+            "Invitation to Team Events",
+            "Branding on Newsletter",
+        ]
+    },
+    {
+        rank : "Bronze",
+        value : "Below 5 L",
+        benefits : [
+            "Feature on Social Media",
+            "Branding on website",
+            "Branding on T-shirt",
+            "Promotional Video",
+            "Promotion through Events",
+        ]
+    }
+]
+
 export const _WhyUsInfo = [
                     "Global exposure through Formula Student Events.",
                     "Global exposure through Formula Student Events Promote motorsports culture & inspire STEM students.",
