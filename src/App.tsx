@@ -11,6 +11,8 @@ import Resources from "./Components/Resources";
 import References from "./Components/References";
 import Events from "./Components/Events";
 import Error404 from "./Components/Error404";
+import ResourcesSub from "./Components/ResourcesSub";
+import EventsSub from "./Components/EventsSub";
 
 const App : React.FC = ()=> {
 	return (
@@ -21,11 +23,16 @@ const App : React.FC = ()=> {
 			<Route path="/teams" element={<Teams />} />
 			<Route path="/ourprojects" element={<OurProjects />} />
 			<Route path="/partnership" element={<Partnership />} />
-			<Route path="/resources" element={<Resources />} />
+			<Route path="/resources" >
+				<Route path=":id" element={<ResourcesSub />} />
+				<Route path="" element={<Resources />} />
+			</Route>
 			<Route path="/connect" element={<Connect />} />
-
 			<Route path="/references" element={<References />} />
-			<Route path="/events" element={<Events />} />
+			<Route path="/events" >
+				<Route path={encodeURI(":id")} element={<EventsSub />} />
+				<Route path="" element={<Events />} />
+			</Route>
 			<Route path="/*" element={<Error404 />} />
 		</Routes>
 		<Footer />

@@ -10,8 +10,8 @@ const OurProjects : React.FC = ()=>
             <img alt="vehicle design" className="absolute -z-10 top-[10vh] left-0 opacity-30 w-[100%]" src={img1Path} />
             <img alt="vehicle design" className="absolute bg-scroll top-[110vh] left-0 -z-10 opacity-30 w-[100%]" src={img2Path} />
             
-            <div className="flex flex-col justify-evenly items-center w-[80%] h-[100vh]">
-                <h1 className="text-theme text-left min-h-[80%] w-[100%] text-10xl font-bold uppercase"><span className="text-4xl text-white">Project<br /></span>Formula<br /> Bharat</h1>
+            <div className="flex flex-col justify-evenly items-center w-[80%] h-[100vh]  ">
+                <h1 className="text-left min-h-[80%] w-[100%] text-10xl font-bold uppercase text-theme-var "><span className="text-4xl text-white">Project<br /></span>Formula<br /> Bharat</h1>
                 <a href={"#"} className="p-2 px-4 font-serif border-2 self-end hover:bg-white hover:text-theme cursor-pointer text-xl transition-all duration-300">Explore </a>
             </div>
 
