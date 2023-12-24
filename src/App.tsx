@@ -13,6 +13,8 @@ import Events from "./Components/Events";
 import Error404 from "./Components/Error404";
 import ResourcesSub from "./Components/ResourcesSub";
 import EventsSub from "./Components/EventsSub";
+import OurProjectsSub from "./Components/OurProjectsSub";
+import ProjectFormulaBharat from "./Components/ProjectFormulaBharat";
 
 const App : React.FC = ()=> {
 	return (
@@ -21,7 +23,12 @@ const App : React.FC = ()=> {
 		<Routes>
 			<Route path="/home" element={<Home />} />
 			<Route path="/teams" element={<Teams />} />
-			<Route path="/ourprojects" element={<OurProjects />} />
+			<Route path="/ourprojects"  >
+				{/* Current Active project */}
+				{/* <Route path={encodeURI("Formula Bharat")} element={<ProjectFormulaBharat />} /> */}
+				<Route path=":id" element={<OurProjectsSub />} />
+				<Route path="" element={<OurProjects />} />
+			</Route>
 			<Route path="/partnership" element={<Partnership />} />
 			<Route path="/resources" >
 				<Route path=":id" element={<ResourcesSub />} />

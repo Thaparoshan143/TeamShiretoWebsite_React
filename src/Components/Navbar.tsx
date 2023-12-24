@@ -23,7 +23,7 @@ const Navbar : React.FC = () =>
             {
                 setScrollActive(true);
             }
-            console.log(window.scrollY);
+            // console.log(window.scrollY);
         };
 
         window.addEventListener('scroll', handleScroll);

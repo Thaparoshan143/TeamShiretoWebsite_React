@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Link } from 'react-router-dom';
 
 interface IInfoCard
 {
     imgURL : string,
     title : string,
-    description? : string 
+    description? : string,
 };
 
 const InfoCard : React.FC<IInfoCard> = ({imgURL, title, description} : IInfoCard) => {
