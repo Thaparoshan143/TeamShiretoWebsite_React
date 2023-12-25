@@ -47,8 +47,202 @@ export const _PreviousProjects = [
     },
 ];
 
-export const _ProjectBharat = [
-    {
-        title : "Our Timeline"
-    }
-];
+export const _PreviousProjectsDesc = [
+    "Our journey to excellence began at Mechtrix 2020, where we emerged victorious in the Go-kart racing competition. Fast forward to Mechtrix 2022, and out crowing achievement, Maicha designed for the Shell Eco Marathon, took center stage. Maicha, with its sleek design and exceptional fuel efficiency, not only garnered attention but also earned us the prestigious Best Engineering Award. These Achievements symbolize out unwavering commitment to innovative and sustainable automotive design."
+]
+
+export const _ProBharatTimeLine = {
+    title : "Our Timeline",
+    items : [
+        {
+            stage : "1",
+            duration : "Nov - Dec",
+            work : "Preliminary Research",
+        },
+        {
+            stage : "2",
+            duration : "Jan - Mar",
+            work : "Preliminary Vehicle Design, Cost Estimation & Sponsorship",
+        },
+        {
+            stage : "3",
+            duration : "Apr - May",
+            work : "Final Design Approval & Material Procurement",
+        },
+        {
+            stage : "4",
+            duration : "May - June",
+            work : "Event Registration & Quiz",
+        },
+        {
+            stage : "5",
+            duration : "Apr - Aug",
+            work : "Race Car Manufacturing & Assembly",
+        },
+        {
+            stage : "6",
+            duration : "Aug - Nov",
+            work : "Track Testing & Vehicle Tuning",
+        },
+        {
+            stage : "7",
+            duration : "Dec - Jan",
+            work : "Pass the Technical Inspection & Participate in Dynamic Event",
+        }
+    ]
+}
+
+export const _ProBharatCostBreakdown = {
+    title : "Cost Breakdown",
+    items : [
+        {
+            department : "Chassis",
+            parts : [
+                {
+                    title : "Frame",
+                    cost : "90"
+                },
+                {
+                    title : "Suspension System",
+                    cost : "400"
+                },
+                {
+                    title : "Steering System",
+                    cost : "40"
+                },
+                {
+                    title : "Miscellaneous",
+                    cost : "150"
+                }
+            ]
+        },
+        {
+            department : "Brakes and Wheels",
+            parts : [
+                {
+                    title : "Tyres with rim",
+                    cost : "200"
+                },
+                {
+                    title : "Brakes system",
+                    cost : "55"
+                },
+                {
+                    title : "Wheel Hub",
+                    cost : "20"
+                },
+                {
+                    title : "Consumables",
+                    cost : "50"
+                }
+            ]
+        },
+        {
+            department : "Powertrain",
+            parts : [
+                {
+                    title : "Battery & BMS",
+                    cost : "500"
+                },
+                {
+                    title : "Motors and Controllers",
+                    cost : "500"
+                },
+                {
+                    title : "Electrical System",
+                    cost : "300"
+                },
+                {
+                    title : "Drivetrain",
+                    cost : "300"
+                }
+            ]
+        },
+        {
+            department : "Logistics",
+            parts : [
+                {
+                    title : "Travel Expenses",
+                    cost : "180"
+                },
+                {
+                    title : "Shipping",
+                    cost : "200"
+                },
+                {
+                    title : "Food and Lodging",
+                    cost : "100"
+                },
+                {
+                    title : "Participating",
+                    cost : "150"
+                }
+            ]
+        },
+        {
+            department : "Composites",
+            parts : [
+                {
+                    title : "Glass Fibers & resin",
+                    cost : "47"
+                },
+                {
+                    title : "Carbon Fiber",
+                    cost : "49"
+                },
+                {
+                    title : "Mold",
+                    cost : "30"
+                },
+                {
+                    title : "Paint & graph",
+                    cost : "55"
+                },
+                {
+                    title : "Miscellaneous",
+                    cost : "15"
+                }
+            ]
+        },
+        {
+            department : "Safety Equipments",
+            parts : [
+                {
+                    title : "Riding Gears",
+                    cost : "150"
+                },
+                {
+                    title : "PPE",
+                    cost : "50"
+                },
+                {
+                    title : "Driver Harness",
+                    cost : "5"
+                },
+            ]
+        }
+    ]
+}
+
+export const _FuturePlans = {
+    title : "Future - Mission Formula Student 2027",
+    items : [
+        {
+            title : "Particaipate in Formula bharat 2025"
+        },
+        {
+            title : "Two years of research development and testin to create a top-performing vehicle"
+        },
+        {
+            title : "Particiapte in Formula student Germany"
+        },
+        {
+            title : "R & D of AI enabled autonomous driving system"
+        }
+    ]
+};
+
+export const _ProjectBharatDesc =  {
+    what : "Formula Bharat is an Indian Formula Student-style engineering design competition in which students from all around the world, compete with a life-size formula-style vehicle in areas of engineering design, overall cost, marketability and dynamic performance. \n These series replicate the global student Formula series hosed in approximately 11 countries per year. On the day of the competition, the teams present their present their projects to the judges, as well as demonstrate their technical solutions on the racetrack by competing in various static and dynamic events."
+
+};

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { _PreviousProjects} from '../assets/data/MoreInfo';
 import { Link } from 'react-router-dom';
@@ -37,12 +37,11 @@ const PageContent : React.FC<IInfoCard>  = ({imgURL, title, description, extraCo
     const thumbnailPath = thumbnailExist();
 
     return (
-        <div className="flex flex-col justify-evenly items-center w-[100%] min-h-[100vh] h-[100vh]">
+        <div className="flex flex-col justify-evenly items-center w-[100%] min-h-[100vh] pt-[7rem]">
             <span className="text-6xl font-bold text-theme uppercase">{title}</span>
-            <img src={thumbnailPath} className="max-h-[40%]" />
-            <p className="text-justify w-[80%]">{description}</p>
+            <img src={thumbnailPath} alt="thumbnail" className="max-h-[30%] max-w-[50%] m-6" />
             {
-                (title==="Formula Bharat")?<ProjectFormulaBharat />:null
+                (title==="Formula Bharat")?<ProjectFormulaBharat />:<p className="text-justify w-[80%]">{description}</p>
             }
             <Link className="p-2 px-6 hover:px-8 bg-theme-alt hover:bg-theme text-xl transition-all hover:rounded-sm duration-300" to={"/ourprojects"}>Other Projects</Link>
         </div>
