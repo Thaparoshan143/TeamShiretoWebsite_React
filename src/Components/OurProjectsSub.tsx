@@ -30,8 +30,8 @@ const PageContent : React.FC<IInfoCard>  = ({imgURL, title, description, extraCo
 {
     const thumbnailExist= ()=>
     {
-        try{return require(imgURL);}
-        catch{return require("../assets/images/projects/pro-2.png");}
+        try{return require("../assets/images/"+imgURL)}
+        catch{return require("../assets/images/logo1.png");}
     }
     
     const thumbnailPath = thumbnailExist();

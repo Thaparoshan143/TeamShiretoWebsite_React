@@ -27,7 +27,7 @@ const PageContent : React.FC<IInfoCard>  = ({imgURL, title, description}) =>
 {
     const thumbnailExist= ()=>
     {
-        try{return require(imgURL);}
+        try{return require("../assets/images/"+imgURL);}
         catch{return require("../assets/images/groupphoto.png");}
     }
     

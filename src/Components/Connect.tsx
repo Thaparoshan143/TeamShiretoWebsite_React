@@ -33,7 +33,7 @@ const JoinUs : React.FC = ()=>
                 }
             </div>
             <hr className="border-theme w-[100%] border-2 rounded-xl" />
-            <a href="#" className="text-5xl text-theme font-extrabold border-2 border-theme hover:text-white hover:bg-theme shadow-sm px-24 p-6 transition-all duration-300">Apply Now !</a>
+            <a href="//#" className="text-5xl text-theme font-extrabold border-2 border-theme hover:text-white hover:bg-theme shadow-sm px-24 p-6 transition-all duration-300">Apply Now !</a>
         </div>
     )
 }
@@ -42,7 +42,7 @@ const AboutUs : React.FC = ()=>
 {
     const logoPath = require("../assets/images/logo1.png");
     return (
-        <div className="p-8 w-[100%] min-h-[80vh] flex flex-col justify-evenly items-center bg-theme">
+        <div className="p-8 w-[100%] min-h-[80vh] flex flex-col justify-evenly items-center bg-theme-alt">
             <h1 className="text-6xl my-6 font-bold uppercase tracking-widest">About Us</h1>
             <img className="w-[20%]" src={logoPath} alt="logo"></img>
             <p className="font-light w-[70%] text-xl text-justify my-8 p-6">{_AboutUs.info}</p>
