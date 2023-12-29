@@ -17,7 +17,7 @@ const OurProjects : React.FC = ()=>
             </div>
 
             <div className="flex flex-col justify-evenly items-center min-h-[120vh] w-[100%]">
-                <h1 className="text-6xl text-theme-var font-bold my-8">Our previous projects</h1>
+                <h1 className="text-4xl text-theme-var font-bold my-8">Our previous projects</h1>
                 <p className="w-[60%] my-8 text-justify">{_PreviousProjectsDesc}</p>
                 {
                     _PreviousProjects.map(({imgURL, title, description})=>
@@ -29,16 +29,5 @@ const OurProjects : React.FC = ()=>
         </div>
     )
 }
-
-// const ImageCard : React.FC = ()=>
-// {
-//     const img1Path = require("../assets/images/pro-bharat/front-2.png");
-
-//     return (
-//         <div className="flex flex-row justify-between items-center max-h-[30rem] p-2 m-8">
-//             <img alt="vehicle design" className="w-[30%] h-[100%] transition-all duration-300" src={img1Path} />
-//         </div>
-//     )
-// }
 
 export default OurProjects;

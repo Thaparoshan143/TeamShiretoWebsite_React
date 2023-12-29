@@ -6,7 +6,7 @@ const Resources : React.FC = ()=>
 {
     return (
         <div className="min-h-[150vh] flex flex-col justify-evenly items-center">
-            <h1 className="text-6xl text-theme font-bold uppercase">Resources</h1>
+            <h1 className="text-3xl text-theme font-bold uppercase">Resources</h1>
             {
                 _Resources.map(({imgURL, title, description})=>
                 {

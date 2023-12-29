@@ -35,7 +35,7 @@ const PageContent : React.FC<IInfoCard>  = ({imgURL, title, description}) =>
 
     return (
         <div className="flex flex-col justify-evenly items-center w-[100%] min-h-[100vh] h-[100vh]">
-            <span className="text-6xl font-bold text-theme uppercase">{title}</span>
+            <span className="text-3xl font-bold text-theme uppercase">{title}</span>
             <img src={thumbnailPath} alt="thumbnail" className="max-h-[40%]" />
             <p className="text-justify w-[80%]">{description}</p>
             <Link className="p-2 px-6 hover:px-8 bg-theme-alt hover:bg-theme text-xl transition-all hover:rounded-sm duration-300" to={"/resources"}>Find More</Link>

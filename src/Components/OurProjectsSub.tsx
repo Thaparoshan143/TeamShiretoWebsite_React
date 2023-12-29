@@ -38,7 +38,7 @@ const PageContent : React.FC<IInfoCard>  = ({imgURL, title, description, extraCo
 
     return (
         <div className="flex flex-col justify-evenly items-center w-[100%] min-h-[100vh] pt-[7rem]">
-            <span className="text-6xl font-bold text-theme uppercase">{title}</span>
+            <span className="text-4xl font-bold text-theme uppercase">{title}</span>
             <img src={thumbnailPath} alt="thumbnail" className="max-h-[30%] max-w-[50%] m-6" />
             {
                 (title==="Formula Bharat")?<ProjectFormulaBharat />:<p className="text-justify w-[80%]">{description}</p>
